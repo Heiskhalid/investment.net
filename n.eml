@@ -1,0 +1,512 @@
+Delivered-To: baseballking4224@gmail.com
+Received: by 2002:a17:90a:31cf:0:0:0:0 with SMTP id j15csp545544pjf;
+        Wed, 10 Mar 2021 09:37:55 -0800 (PST)
+X-Google-Smtp-Source: ABdhPJzls+9fz3L9BsL7yBmdO1anJiHGiHIeGYzzG1XUSZAB8w646qf0T4bl8wFQGpGa6FbRJASH
+X-Received: by 2002:a17:90a:a789:: with SMTP id f9mr4817445pjq.192.1615397875300;
+        Wed, 10 Mar 2021 09:37:55 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1615397875; cv=none;
+        d=google.com; s=arc-20160816;
+        b=KE0RW2dq2twEiNRw8AW84x33GU7MucCsm2EZ0BfGOMES6UpMhgWUH79oJT1a5G7EJ1
+         qOBzJCJ1L27R0y2yOcUPf5prbOr7ZKmPpN8jghsquE/9hmLbWnG1noouq1FdIyWJurOA
+         PXuv9VHekeh9SmdpianFscS8ST3XphSQy2J+nZsdGvZoXFoQrIQ8srM74ZGNOhF88yGh
+         t8V0OvSdaRcPEF/okPG9E/qF1ZIlaJ8SJl7F1jlrS9HE1BtEcV4hAPNkGafSkWJByFPK
+         UeQgQsOA8cSpRVhvD9P+yW2IpQuIfEJZTPxaZ7wOD+gr4M6HgjowIcwTBwW2Fn5Q2Jh9
+         IPmw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:subject:reply-to:date:to:from:dkim-signature;
+        bh=O6LRvCe7KYCYd/RSK6cNbdxyO1SG66gcHtY08XtJWZw=;
+        b=oqjkQfFh6R4VzHXFHwly9MhYfyvAqQ9LPWwurjWnhSfEe2NUzBGGz9TRwp9JzZmOh6
+         kO7S5H+qa+wA7W9ZpJw38dk8mWbRxxfAMTSEp6QNR+NzvvRZcY1ORdYSjEIyviDOrsCB
+         foMXe4BHCixJ0zJDcGQi6olNM08PolKpLwlty48CQnBvBF+SQXUei/E2FoDuX6LJfgVS
+         A/EIyP8jYWls1xcUmMQ3FDw/icODSdt97u8wra5y1D3/FjP2GmKa9q4Uzt1AIH2o91AO
+         hTacg5OgnxNAD/DsfZgw1Ic2oHT2Cca4FlR2bx+xxoiBOEvK383AiOaLTtM+OZT/VE1j
+         dY4A==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@zellepay.com header.s=august2016 header.b=KhMZ+x5k;
+       spf=pass (google.com: domain of notifications@zellepay.com designates 199.47.139.181 as permitted sender) smtp.mailfrom=Notifications@zellepay.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=zellepay.com
+Return-Path: <Notifications@zellepay.com>
+Received: from smtp2.earlywarning.com (smtp2.earlywarning.com. [199.47.139.181])
+        by mx.google.com with ESMTPS id z12si112887pln.80.2021.03.10.09.37.54
+        for <baseballking4224@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 10 Mar 2021 09:37:55 -0800 (PST)
+Received-SPF: pass (google.com: domain of notifications@zellepay.com designates 199.47.139.181 as permitted sender) client-ip=199.47.139.181;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@zellepay.com header.s=august2016 header.b=KhMZ+x5k;
+       spf=pass (google.com: domain of notifications@zellepay.com designates 199.47.139.181 as permitted sender) smtp.mailfrom=Notifications@zellepay.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=zellepay.com
+Received: from pps.filterd (a2280caop.earlywarning.com [127.0.0.1])
+	by a2280caop.earlywarning.com (8.16.0.42/8.16.0.42) with SMTP id 12AHb1cq005824
+	for <baseballking4224@gmail.com>; Wed, 10 Mar 2021 11:37:54 -0600
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=zellepay.com; h=from : to : date :
+ reply-to : subject : content-type : message-id; s=august2016;
+ bh=O6LRvCe7KYCYd/RSK6cNbdxyO1SG66gcHtY08XtJWZw=;
+ b=KhMZ+x5kYb2LzQ5w3BTyvq2tuN98Ln0yAV4M2fkIo7sBqpYOkSsG+RczPReoidSNfSFm
+ BzMdPzf1w7kTnDMDfTdzgabG/3rYDNPNODEYBt4yjGA56fMG7Z25dg1Tp+I3IuNwSRUz
+ X5utS26cGAnwzzsdzxeEWkXYFasd9sCGGiTv7a7dkLTksVRYlYN8Yl6JA6YdXtojzOpE
+ PviUVf0yBYmySWHA7JgTwMr28Vr6K3Bq3asBXWmOydX0ZcWrN9Zt+c6m07/u30iUS3ZX
+ qRYp7b3BicX5qsNXBwXHtVwtJqF4EvjNlIsbSZgCBIMETLTk7od7+iB8MgWZ35bA83D6 yw== 
+Received: from s4888pawv.ews.int ([10.16.6.66])
+	by a2280caop.earlywarning.com with ESMTP id 3748fvqyaw-2
+	(version=TLSv1.2 cipher=ECDHE-RSA-AES256-SHA384 bits=256 verify=NOT)
+	for <baseballking4224@gmail.com>; Wed, 10 Mar 2021 11:37:54 -0600
+Received: from s6305powa.prodew.int ([10.16.6.253]) by s4888pawv.ews.int with Microsoft SMTPSVC(7.5.7601.17514);
+	 Wed, 10 Mar 2021 11:37:53 -0600
+Received: from authentify.inc ([10.214.39.107]) by s6305powa.prodew.int with Microsoft SMTPSVC(8.5.9600.16384);
+	 Wed, 10 Mar 2021 11:37:53 -0600
+From: "Zelle"<Notifications@zellepay.com>
+To: <baseballking4224@gmail.com>
+Date: Wed, 10 Mar 2021 17:37:53 GMT
+Reply-To: <no-reply@zellepay.com>
+Subject: SAMIAT SALAMI sent you $3,500.00 with =?utf-8?Q?Zelle=C2=AE=EF=B8=8F?=
+Content-Type: text/html
+Message-ID: <S6305POWAMUrYawLLeZ000b8aab@s6305powa.prodew.int>
+X-OriginalArrivalTime: 10 Mar 2021 17:37:53.0172 (UTC) FILETIME=[1941ED40:01D715D4]
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10434:6.0.369,18.0.761
+ definitions=2021-03-10_10:2021-03-10,2021-03-10 signatures=0
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><!--[if IE]><html xmlns="http://www.w3.org/1999/xhtml" class="ie-browser" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"><![endif]--><!--[if !IE]><!-->
+<html style="margin: 0;padding: 0;" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:text-align="http://www.w3.org/1999/xhtml"><!--<![endif]--><head>
+    <!--[if gte mso 9]><xml>
+    <o:OfficeDocumentSettings>
+        <o:AllowPNG/>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+</xml><![endif]-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width">
+    <!--[if !mso]><!--><meta http-equiv="X-UA-Compatible" content="IE=edge"><!--<![endif]-->
+    <title>SAMIAT SALAMI sent you money with Zelle</title>
+<style type="text/css" id="media-query">
+		body {
+           margin: 0;
+           padding: 0;
+           font-family: Zelle Sans, Zelle Sans Light, Zelle Sans Demi,Helvetica Neue,Helvetica,Arial,Verdana,Trebuchet MS,sans-serif;
+           color:#000;
+           text-align:center;
+         }
+
+        table, tr, td {
+            vertical-align: top;
+            border-collapse: collapse; }
+
+        .ie-browser table, .mso-container table {
+            table-layout: fixed; }
+
+        * {
+            line-height: inherit; }
+
+        a[x-apple-data-detectors=true] {
+            color: inherit !important;
+            text-decoration: none !important; }
+
+        [owa] .img-container div, [owa] .img-container button {
+            display: block !important; }
+
+        [owa] .fullwidth button {
+            width: 100% !important; }
+
+        .ie-browser .col, [owa] .block-grid .col {
+            display: table-cell;
+            float: none !important;
+            vertical-align: top; }
+
+        .ie-browser .num12, .ie-browser .block-grid, [owa] .num12, [owa] .block-grid {
+            width: 500px !important; }
+
+        .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {
+            line-height: 100%; }
+
+        .ie-browser .mixed-two-up .num4, [owa] .mixed-two-up .num4 {
+            width: 164px !important; }
+
+        .ie-browser .mixed-two-up .num8, [owa] .mixed-two-up .num8 {
+            width: 328px !important; }
+
+        .ie-browser .block-grid.two-up .col, [owa] .block-grid.two-up .col {
+            width: 250px !important; }
+
+        .ie-browser .block-grid.three-up .col, [owa] .block-grid.three-up .col {
+            width: 166px !important; }
+
+        .ie-browser .block-grid.four-up .col, [owa] .block-grid.four-up .col {
+            width: 125px !important; }
+
+        .ie-browser .block-grid.five-up .col, [owa] .block-grid.five-up .col {
+            width: 100px !important; }
+
+        .ie-browser .block-grid.six-up .col, [owa] .block-grid.six-up .col {
+            width: 83px !important; }
+
+        .ie-browser .block-grid.seven-up .col, [owa] .block-grid.seven-up .col {
+            width: 71px !important; }
+
+        .ie-browser .block-grid.eight-up .col, [owa] .block-grid.eight-up .col {
+            width: 62px !important; }
+
+        .ie-browser .block-grid.nine-up .col, [owa] .block-grid.nine-up .col {
+            width: 55px !important; }
+
+        .ie-browser .block-grid.ten-up .col, [owa] .block-grid.ten-up .col {
+            width: 50px !important; }
+
+        .ie-browser .block-grid.eleven-up .col, [owa] .block-grid.eleven-up .col {
+            width: 45px !important; }
+
+        .ie-browser .block-grid.twelve-up .col, [owa] .block-grid.twelve-up .col {
+            width: 41px !important; }
+
+        @media only screen and (min-width: 520px) {
+            .block-grid {
+                width: 500px !important; }
+            .block-grid .col {
+                display: table-cell;
+                Float: none !important;
+                vertical-align: top; }
+            .block-grid .col.num12 {
+                width: 500px !important; }
+            .block-grid.mixed-two-up .col.num4 {
+                width: 164px !important; }
+            .block-grid.mixed-two-up .col.num8 {
+                width: 328px !important; }
+            .block-grid.two-up .col {
+                width: 250px !important; }
+            .block-grid.three-up .col {
+                width: 166px !important; }
+            .block-grid.four-up .col {
+                width: 125px !important; }
+            .block-grid.five-up .col {
+                width: 100px !important; }
+            .block-grid.six-up .col {
+                width: 83px !important; }
+            .block-grid.seven-up .col {
+                width: 71px !important; }
+            .block-grid.eight-up .col {
+                width: 62px !important; }
+            .block-grid.nine-up .col {
+                width: 55px !important; }
+            .block-grid.ten-up .col {
+                width: 50px !important; }
+            .block-grid.eleven-up .col {
+                width: 45px !important; }
+            .block-grid.twelve-up .col {
+                width: 41px !important; } }
+
+        @media (max-width: 520px) {
+            .block-grid, .col {
+                min-width: 320px !important;
+                max-width: 100% !important; }
+            .block-grid {
+                width: calc(100% - 40px) !important; }
+            .col {
+                width: 100% !important; }
+            .col > div {
+                margin: 0 auto; }
+            img.fullwidth {
+                max-width: 100% !important; }
+		}
+
+		.p {
+		font-size: 14px;
+		line-height: 19px;
+		color: #000;
+		font-family: Zelle Sans, Zelle Sans Light, Zelle Sans Demi,Helvetica Neue,Helvetica,Arial,Verdana,Trebuchet MS,sans-serif;
+		margin: 0;
+		text-align:center;
+		}
+
+		.superscript {
+				position: relative;
+				top: -0.40em;
+				font-size: .5em;
+		}
+		
+		sup {
+              line-height: 0;
+              font-size: .7em;
+              top: -0.40em;
+              mzo-text-raise: 60%;
+		}
+
+
+		.information-menu__link, .information-menu__link:focus {
+				font-size: .9em;
+				<!--line-height: 1.66667em;-->
+				letter-spacing: 0em;
+				text-decoration: none;
+				color: #6E1AC9;
+				margin-left: 20px;
+
+		}
+		.information-menu__link:hover {
+				color: #6E1AC9;
+				text-decoration: underline;
+				opacity: 1;
+				transition: opacity .4s ease-out;
+		}
+
+		.textlink, .textlink:focus {
+				font-size: 1em;
+				<!--line-height: 1.66667em;-->
+				letter-spacing: 0em;
+				text-decoration: none;
+				color: #6E1AC9;
+		}
+
+		.textlink:hover {
+				color: #6E1AC9;
+				text-decoration: underline;
+				opacity: 1;
+				transition: opacity .4s ease-out;
+		}
+
+    </style>
+</head>
+<!--[if mso]>
+<body class="mso-container" style="background-color:#FFFFFF;">
+<![endif]-->
+<!--[if !mso]><!-->
+<body class="clean-body" style="margin: 0;padding: 0;-webkit-text-size-adjust: 100%;background-color: #FFFFFF">
+<!--<![endif]-->
+<div class="nl-container" style="min-width: 320px;Margin: 0 auto;background-color: #FFFFFF">
+    <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" style="background-color: #FFFFFF;"><![endif]-->
+
+    <div style="background-color:#FFFFFF;">
+        <div style="Margin: 0 auto;min-width: 320px;max-width: 500px;width: 500px;width: calc(19000% - 98300px);overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;" class="block-grid ">
+            <div style="border-collapse: collapse;width: 100%;">
+                <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:#ffffff;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 500px;"><tr class="layout-full-width" style="background-color:transparent;"><![endif]-->
+
+                <!--[if (mso)|(IE)]><td align="center" width="500" style=" width:500px; padding-right: 0px; padding-left: 0px; padding-top:0px; padding-bottom:0px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><![endif]-->
+                <div class="col num12" style="min-width: 320px;max-width: 500px;width: 500px;width: calc(18000% - 89500px);background-color: transparent;">
+                    <div style="background-color: transparent; width: 100% !important;">
+                        <!--[if (!mso)&(!IE)]><!--><div style="border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:0px; padding-bottom:0px; padding-right: 0px; padding-left: 0px;"><!--<![endif]-->
+
+
+                        <div style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
+                            <!--[if (mso)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px;padding-left: 10px; padding-top: 10px; padding-bottom: 10px;"><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0"><tr><td><![endif]-->
+                            <div align="center"><div style="border-top: 10px solid transparent; width:100%; line-height:0px;">&nbsp;</div></div>
+                            <!--[if (mso)]></td></tr></table></td></tr></table><![endif]-->
+                        </div>
+
+
+
+                        <div align="center" class="img-container center" style="padding-right: 0px;  padding-left: 0px;">
+                            <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px;" align="center"><![endif]-->
+                        	<a href="https://www.zellepay.com" target="_blank">
+                                <img class="center" align="center" border="0" src="https://register.zellepay.com/email_assets/logoPurplenotext.png" alt="Zelle Logo" title="Zelle Logo" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: none;float: none;width: 100%;max-width: 125px" width="125" height="52">
+								</a>
+								<!--[if mso]></td></tr></table><![endif]-->
+                        </div>
+
+                            <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top: 30px; padding-bottom: 5px;"><![endif]-->
+                            <div style="padding-right: 0px; padding-left: 0px; padding-top: 40px">
+                                <div style="display: table; text-align: center;font-size: 30px; line-height: 30px; color:#000; margin: auto">
+
+                                    <div style="display: table-cell; vertical-align: middle; font-size:30px;font-family: Helvetica;">
+
+                                        <p style="margin: 0;font-size: 20px;line-height: 25px;text-align: center">
+                                            <span style="font-size: 20px; line-height: 25px;">
+                                                You only have <strong>14</strong> days left.<br/>
+                                                Enroll to receive<br/>
+                                                <span style="font-size: 30px; font-family: Helvetica-Bold; line-height: 25px; text-align: center"><strong>$3,500.00</strong></span><br/>
+                                                from <span style="text-transform:uppercase;">SAMIAT SALAMI
+                                                </span>
+                                            </span>
+                                        </p>
+                                        <!-- the memo. note that the field is optional in the payment. -->
+                                        <p style="text-align:center; color:#000; font-size: 16px;">
+                                            
+                                        </p>
+                                    </div>
+                                    <!-- End  Update the sender or recipient here -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--[if mso]></td></tr></table><![endif]-->
+
+
+                    <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-spacing: 0; border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top:10px; padding-bottom:10px;" align="center"><![endif]-->
+					
+                  
+                    <div style="padding-right: 10px; padding-left: 10px; padding-top: 0px; color:#000; padding-bottom: 8px;width: 300px;margin: 0 auto; ">
+
+						<div align="center" class="button-container center" style="padding-right: 10px; padding-left: 10px; padding-top:10px; padding-bottom:10px;">
+                            <a style="text-decoration:none;" href="https://enroll.zellepay.com/?encryptedIndex=0&amp;encryptedToken=5FE6B7F85604AF969A6CF53853EE7ED5B596BB61D0B83B4567300C32AE794C689927B20AC602975929F8229A98133DDE&amp;encryptedTimeStamp=C3EDE89B706A9F488B06D73328265C3383BC27994B115ADAB706C8627ABBA2D9BFB511B74660F430A2AF544F4DD36B25" target="_blank">
+                                <div style="box-shadow: 0px 2px 2px #474747; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; max-width: 400px; width: 44px; width: auto; border-top: 0px solid transparent; border-right: 0px solid transparent; border-bottom: 0px solid transparent; border-left: 0px solid transparent; padding-top: 15px; padding-right: 30px; padding-bottom: 15px; padding-left: 30px;font-family: Zelle Sans,Zelle Sans Light, Zelle Sans Demi, Helvetica Neue, Helvetica, Arial, Verdana, Trebuchet MS, sans-serif; text-align: center;background-color:#6E1AC9;color:#fff;">
+                                     <span style="font-size:16px;line-height:30px;color:#fff;text-transform:uppercase;font-family: Helvetica;">
+                                       ENROLL TO RECEIVE
+                                     </span>
+                                </div>
+                            
+                            </a>
+                        </div>
+
+
+
+                    </div>
+                    <div style="padding: 10px">
+                        <div align="center">
+                            <div style="solid transparent; width:100%; line-height:20px; font-family: Helvetica;">
+                                <p style="text-align:center;font-size: 16px;">
+                                    To receive your money, enroll using this email address:
+                                </p>
+                                <p><a href="#" style="font-size:20px;color:#000;text-decoration:none !important; text-decoration:none;">
+                                    <b>baseballking4224@gmail.com</b></a>
+                                </p>                                
+                                <p style="text-align:center; color:#4A4A4A; font-size: 14px;opacity: 0.9;">
+                                   Before Mar 24, 2021
+                                        <br/>
+                                        Terms and conditions apply
+                                        <hr/>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- End  Update the sender or recipient here -->
+                    </div>
+                </div>
+
+
+                    <!--[if mso]></center></v:roundrect></td></tr></table><![endif]-->
+                </div>
+
+                <div style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
+                    <!--[if (mso)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px;padding-left: 10px; padding-top: 10px; padding-bottom: 10px;"><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0"><tr><td><![endif]-->
+                    <div align="center"><div style="solid transparent; width:100%; line-height:20px;">
+                        <p style="text-align:center; color:#000;">Zelle<span class="sup">&reg;</span> is a fast, safe & easy way to send money to and receive money from friends, family and others you trust.</p>
+		    <p style="text-align:center; color:#000; ">For more information, please visit
+                            <a class="textlink"  style="color:#6E1AC9; -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); text-decoration: none;" href="https://www.zellepay.com/support">https://www.zellepay.com</a></p>
+                    </div></div>
+                    <!--[if (mso)]></td></tr></table></td></tr></table><![endif]-->
+                </div>
+
+
+
+                <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->
+        </div>
+    </div>
+    <!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif]-->
+</div>
+
+
+
+<div style="background-color:#f4f4f4;">
+    <div style="Margin: 0 auto;min-width: 320px;max-width: 500px;width: 500px;width: calc(19000% - 98300px);overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;" class="block-grid ">
+        <div style="border-collapse: collapse;width: 100%;">
+            <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:#f4f4f4;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 500px;"><tr class="layout-full-width" style="background-color:transparent;"><![endif]-->
+
+            <!--[if (mso)|(IE)]><td align="center" width="500" style=" width:500px; padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><![endif]-->
+            <div class="col num12" style="min-width: 320px;max-width: 500px;width: 500px;width: calc(18000% - 89500px);background-color: transparent;">
+                <div style="background-color: transparent; width: 100% !important;">
+                    <!--[if (!mso)&(!IE)]><!--><div style="border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:5px; padding-bottom:5px; padding-right: 0px; padding-left: 0px;"><!--<![endif]-->
+
+
+                    <div align="center" class="img-container center" style="padding-right: 20px;  padding-left: 20px;">
+                        <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 20px; padding-left: 20px;" align="center"><![endif]-->
+                        <div style="line-height:20px;font-size:1px">&nbsp;</div>
+                        <a href="https://www.zellepay.com/" target="_blank"><img class="center" align="center" border="0" src="https://register.zellepay.com/email_assets/logoPurplenotext.png" alt="Zelle Logo" title="Zelle Logo" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: 0;height: auto;float: none;width: 100%;max-width: 69px" width="69"></a>
+                        <!--<div style="line-height:20px;font-size:1px">&nbsp;</div>--><!--[if mso]></td></tr></table><![endif]-->
+                    </div>
+
+
+
+                    <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->
+                </div>
+            </div>
+            <!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif]-->
+        </div>
+    </div>
+</div>
+
+
+
+<div style="background-color:#f4f4f4;">
+    <div style="Margin: 0 auto;min-width: 320px;max-width: 500px;width: 500px;width: calc(19000% - 98300px);overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;" class="block-grid ">
+        <div style="border-collapse: collapse;display: table;width: 100%;">
+            <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:#f4f4f4;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 500px;"><tr class="layout-full-width" style="background-color:transparent;"><![endif]-->
+
+            <!--[if (mso)|(IE)]><td align="center" width="500" style=" width:500px; padding-right: 0px; padding-left: 0px; padding-top:15px; padding-bottom:15px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><![endif]-->
+            <div class="col num12" style="min-width: 320px;max-width: 500px;width: 500px;width: calc(18000% - 89500px);background-color: transparent;">
+                <div style="background-color: transparent; width: 100% !important;">
+                    <!--[if (!mso)&(!IE)]><!--><div style="border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:15px; padding-bottom:15px; padding-right: 0px; padding-left: 0px;"><!--<![endif]-->
+
+                    <div style="font-size: 16px;font-family: Zelle Sans,Zelle Sans Light, Zelle Sans Demi,Helvetica Neue,Helvetica,Arial,Verdana,Trebuchet MS,sans-serif; text-align: center;  padding-right: 2em;">
+                       
+
+                        <table align="center" style="display: table; min-width:300px; max-width: 350px">
+                            <tr align="center">
+                                <td><a class="textlink" style="font-size:15px; color:#6E1AC9;" href="https://www.zellepay.com/support/contact" target="_blank">Contact</a></td>
+                                <td><a class="textlink" style="font-size:15px; color:#6E1AC9;" href="https://www.zellepay.com/privacy-policy" target="_blank">Privacy</a></td>
+                                <td><a class="textlink" style="font-size:15px; color:#6E1AC9;" href="https://www.zellepay.com/legal-and-privacy" target="_blank">Legal</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->
+                </div>
+            </div>
+            <!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif]-->
+        </div>
+    </div>
+</div>
+
+
+<div style="background-color:#f4f4f4;">
+    <div style="Margin: 0 auto;min-width: 320px;max-width: 500px;width: 500px;width: calc(19000% - 98300px);overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;" class="block-grid ">
+        <div style="border-collapse: collapse;display: table;width: 100%;">
+            <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:#f4f4f4;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 500px;"><tr class="layout-full-width" style="background-color:transparent;"><![endif]-->
+
+            <!--[if (mso)|(IE)]><td align="center" width="500" style=" width:500px; padding-right: 0px; padding-left: 0px; padding-top:30px; padding-bottom:30px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><![endif]-->
+            <div class="col num12" style="min-width: 320px;max-width: 500px;width: 500px;width: calc(18000% - 89500px);background-color: transparent;">
+                <div style="background-color: transparent; width: 100% !important;">
+                    <!--[if (!mso)&(!IE)]><!--><div style="border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:10px; padding-bottom:30px; padding-right: 0px; padding-left: 0px;"><!--<![endif]-->
+
+
+
+                    <div align="center" class="img-container center" style="padding-right: 20px;  padding-left: 20px;">
+                        <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 20px; padding-left: 20px;" align="center"><![endif]-->
+                        <!--<div style="line-height:20px;font-size:1px">&nbsp;</div>-->
+
+                        <!--[if mso]></td></tr></table><![endif]-->
+                    </div>
+
+
+                    <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 15px; padding-bottom: 10px;"><![endif]-->
+                    <div style="padding-right: 10px; padding-left: 10px; padding-top: 15px; padding-bottom: 10px;">
+                        <div style="font-size:12px;line-height:18px;text-align:center;color:#000;font-family: Zelle Sans,Zelle Sans Light, Zelle Sans Demi,Helvetica Neue,Helvetica,Arial,Verdana,Trebuchet MS,sans-serif; -webkit-tap-highlight-color:rgba(255, 255, 255, 0);">Contact <em><i>Zelle</i></em> Support at 1-844-428-8542,<br/>7 days a week, 8am-Midnight Eastern.<br/><a style="text-decoration: none;" href="mailto:customerservice@zellepay.com" class="textlink" style="color:#6E1AC9;" target="_blank">customerservice@zellepay.com</a></div>
+                    </div>
+                    <!--[if mso]></td></tr></table><![endif]-->
+
+
+                    <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 15px; padding-bottom: 10px;"><![endif]-->
+                    <div style="padding-right: 10px; padding-left: 10px; padding-top: 15px; padding-bottom: 10px;">
+                        <div style="font-size:12px;line-height:18px;text-align:center;color:#000;font-family: Zelle Sans,Zelle Sans Light, Zelle Sans Demi,Helvetica Neue,Helvetica,Arial,Verdana,Trebuchet MS,sans-serif; -webkit-tap-highlight-color:rgba(255, 255, 255, 0);">Early Warning Services, LLC<br/>16552 N. 90th Street,<br/>Scottsdale, AZ 85260 USA</div>
+                    </div>
+                    <!--[if mso]></td></tr></table><![endif]-->
+
+
+
+                    <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 15px; padding-bottom: 10px;"><![endif]-->
+                    <div style="padding-right: 10px; padding-left: 10px; padding-top: 15px; padding-bottom: 10px;">
+                        <div style="font-size:12px;line-height:18px;text-align:center;color:#000;font-family: Zelle Sans,Zelle Sans Light, Zelle Sans Demi,Helvetica Neue,Helvetica,Arial,Verdana,Trebuchet MS,sans-serif;">&copy; 2020 Early Warning Services, LLC.<br/>Zelle and the Zelle related marks and logos are<br/>property of Early Warning Services, LLC</div>
+                    </div>
+                    <!--[if mso]></td></tr></table><![endif]-->
+					
+					 <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 15px; padding-bottom: 10px;"><![endif]-->
+                    <div style="padding-right: 10px; padding-left: 10px; padding-top: 15px; padding-bottom: 10px;text-align:center;">
+						<div style="font-size:12px;line-height:18px;text-align:center;color:#000;font-family: Zelle Sans,Zelle Sans Light, Zelle Sans Demi,Helvetica Neue,Helvetica,Arial,Verdana,Trebuchet MS,sans-serif;">
+							Unsubscribe <a style="text-decoration: none;" href="https://register.zellepay.com/opt-out?encryptedIndex=0&amp;encryptedToken=5FE6B7F85604AF969A6CF53853EE7ED5B596BB61D0B83B4567300C32AE794C689927B20AC602975929F8229A98133DDE&amp;encryptedTimeStamp=C3EDE89B706A9F488B06D73328265C3383BC27994B115ADAB706C8627ABBA2D9BFB511B74660F430A2AF544F4DD36B25" class="textlink" style="color:#6E1AC9;" target="_blank">here</a> to stop getting emails from <i>Zelle</i>.
+						</div>
+                   </div>
+                    <!--[if mso]></td></tr></table><![endif]-->
+
+
+                    <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->
+                </div>
+            </div>
+            <!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif]-->
+        </div>
+    </div>
+</div>   <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+</body></html>       

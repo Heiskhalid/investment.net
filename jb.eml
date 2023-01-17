@@ -1,0 +1,461 @@
+Delivered-To: baseballking4224@gmail.com
+Received: by 2002:a25:b7d1:0:0:0:0:0 with SMTP id u17csp1375993ybj;
+        Sun, 17 Apr 2022 15:41:16 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJxkt0PoOHgru221G94Fvz+3/Q5KhpzYvqa9gYjEbz24Zi3ynYAOLnQRKSnIGnWOsrB1gXYP
+X-Received: by 2002:ac8:7fcc:0:b0:2e0:684e:42cc with SMTP id b12-20020ac87fcc000000b002e0684e42ccmr5445282qtk.35.1650235276593;
+        Sun, 17 Apr 2022 15:41:16 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1650235276; cv=none;
+        d=google.com; s=arc-20160816;
+        b=R5uRCgIQbLXZQ0/YDl6BaVjai0JfAVn1llKpxrfwMGAkPoBY0ucJ0pCAYTJc5I1yX1
+         oeagWchP5+vhDVsfquGmxqtMp3aH8zZcgQTgAHmdEThZGVCihysSK+wC+jNB3XtfgWyO
+         aAlf4gheEl7sSqKZnUBxTi6k7tAWF/QnrWXQ7AlHyUprZNStM0xGSkVm81hhQMuFGuu8
+         NlIq6CXRyqM4Ys5Y/aYxTvKM1g6cFUROh2mkOxSjGWwqgD4aNg6Stwi1Y/NHYogKqWNZ
+         UTCfP1xXE6uFbHCJFQOqQ87/qZekXskT3EKT4jefh5Hhx5pFuSYPKljfUzxPM22VQFbp
+         QAbg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=feedback-id:date:message-id:mime-version:subject:to:reply-to:from
+         :dkim-signature:dkim-signature;
+        bh=9CyEn0PJLcU/394m/20DIl5XMhpXJ0xiOA0XhqF1gkw=;
+        b=BvFR5C9cFjUs8+YbQ5toXYNinHa2oH/s88DD/bqiS/d9XrYb4mWP5/CkNv5DZPepcc
+         luAR1A6TcGLR2pShJkIFmsLV8SBzbCCfjmoblLa5kFFeB9xBMraLHJ6iC2fbefQa5Mtz
+         YAfYJT30r56D+o3a3XLr62qdAXnilGASva4HeMKCUxdHPGHH5UNPcc+8ECvWG11m2ALE
+         EmQ2s1wvqjBoAX7dF38wUPleiqwNY6cKgZm8zxU5X4nyZmOyU9xWdK+MsXihhyQ16pZv
+         ghy+sn2+9PgztrbVI+1EY+/+OJazepv9f0OA5wG8A+pxfBKsRCZ/8b13ED0O+ewi2hi4
+         jufw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@venmo.com header.s=qbj4rklbg4bdssleu37kmepljop2lmma header.b=AFl85goj;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b="IMDk+/d5";
+       spf=pass (google.com: domain of 0100018039aff874-8697b2aa-510a-4444-9bdc-4c930dc9e327-000000@amazonses.com designates 54.240.48.16 as permitted sender) smtp.mailfrom=0100018039aff874-8697b2aa-510a-4444-9bdc-4c930dc9e327-000000@amazonses.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=venmo.com
+Return-Path: <0100018039aff874-8697b2aa-510a-4444-9bdc-4c930dc9e327-000000@amazonses.com>
+Received: from a48-16.smtp-out.amazonses.com (a48-16.smtp-out.amazonses.com. [54.240.48.16])
+        by mx.google.com with ESMTPS id x7-20020a05620a448700b0069c7d4314fbsi2545175qkp.690.2022.04.17.15.41.15
+        for <baseballking4224@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 17 Apr 2022 15:41:16 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 0100018039aff874-8697b2aa-510a-4444-9bdc-4c930dc9e327-000000@amazonses.com designates 54.240.48.16 as permitted sender) client-ip=54.240.48.16;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@venmo.com header.s=qbj4rklbg4bdssleu37kmepljop2lmma header.b=AFl85goj;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b="IMDk+/d5";
+       spf=pass (google.com: domain of 0100018039aff874-8697b2aa-510a-4444-9bdc-4c930dc9e327-000000@amazonses.com designates 54.240.48.16 as permitted sender) smtp.mailfrom=0100018039aff874-8697b2aa-510a-4444-9bdc-4c930dc9e327-000000@amazonses.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=venmo.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=qbj4rklbg4bdssleu37kmepljop2lmma; d=venmo.com; t=1650235275;
+	h=From:Reply-To:To:Subject:MIME-Version:Content-Type:Message-ID:Date;
+	bh=gEfeH8MwdoZRZ8gtue+2u52xiu5NDsngERQkb+2YXpc=;
+	b=AFl85gojaS3lOqxPDq539PYJR9zlQNCY0oR4QnPYC/3SoLoDO+cnTh82aykVVCou
+	geZ3+vlbynUED+5SzUcdsuKZALWz0TQtGX4IP8JFoKG1Q7nq/Tj+ZHNKie+KYuqTiPz
+	7xoMPQmeIq/4fAXjZmgwcvmDhxyw1Hj2CUga78W4=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1650235275;
+	h=From:Reply-To:To:Subject:MIME-Version:Content-Type:Message-ID:Date:Feedback-ID;
+	bh=gEfeH8MwdoZRZ8gtue+2u52xiu5NDsngERQkb+2YXpc=;
+	b=IMDk+/d5ByyDrlRsZ5nzAIgFqjTsPQo5og8Ip9JT3YnpUrj9sb8cr50PqcCUe6lr
+	Z/9Q4IuCua9FtC01mdp7BU9NnCZY81D+rUtk2/DF4tVV7GG6r404oFM3D/s/Pg648VM
+	JNGeLsV2J0J/SKp351izYYaAEmRiqcPWN5aLUFsA=
+From: Venmo <venmo@venmo.com>
+Reply-To: no-reply@venmo.com
+To: baseballking4224@gmail.com
+Subject: Your Venmo instant transfer has been sent
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_490560_1285151188.1650235275383"
+Message-ID: <0100018039aff874-8697b2aa-510a-4444-9bdc-4c930dc9e327-000000@email.amazonses.com>
+Date: Sun, 17 Apr 2022 22:41:15 +0000
+Feedback-ID: 1.us-east-1.fQ0yL0IwGSResIpU9lW9fHNtFl/iEQA4Znd52HkQv2U=:AmazonSES
+X-SES-Outgoing: 2022.04.17-54.240.48.16
+
+------=_Part_490560_1285151188.1650235275383
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+------=_Part_490560_1285151188.1650235275383
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3.=
+org/1999/xhtml" lang=3D"en" xml:lang=3D"en" style=3D"box-sizing:border-box;=
+color:#2f3033;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-=
+size:16px;font-weight:400;line-height:1.375;text-align:center"><head><meta =
+http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><meta na=
+me=3D"viewport" content=3D"width=3Ddevice-width"><title>Instant Transfer In=
+itiated</title><style>@media only screen{html{min-height:100%;background:#f=
+3f3f3}}@media only screen and (max-width:596px){table.body img{width:auto;h=
+eight:auto}table.body center{min-width:0!important}table.body .container{wi=
+dth:95%!important}table.body .columns{height:auto!important;-moz-box-sizing=
+:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;padding-lef=
+t:16px!important;padding-right:16px!important}table.body .columns .columns{=
+padding-left:0!important;padding-right:0!important}th.small-3{display:inlin=
+e-block!important;width:25%!important}th.small-4{display:inline-block!impor=
+tant;width:33.33333%!important}th.small-8{display:inline-block!important;wi=
+dth:66.66667%!important}th.small-9{display:inline-block!important;width:75%=
+!important}th.small-12{display:inline-block!important;width:100%!important}=
+.columns th.small-12{display:block!important;width:100%!important}}@media s=
+creen and (min-width:596px){.wrapper{width:580px}}@media screen and (min-wi=
+dth:596px){.hero-card-container{padding:0 78px!important}}@media screen and=
+ (max-width:596px){.hero-card-container .card-container .content-container{=
+min-width:236px;min-height:202px;padding:32px 32px}.hero-card-container .ca=
+rd-container .content-container .main-text{min-height:96px;margin-bottom:24=
+px}}@media screen and (min-width:596px){.hero-card-with-top-and-bottom-logo=
+ .generic-disclosures{padding:0 78px!important}}</style></head><body style=
+=3D"-moz-box-sizing:border-box;-ms-text-size-adjust:100%;-webkit-box-sizing=
+:border-box;-webkit-text-size-adjust:100%;margin:0;box-sizing:border-box;co=
+lor:#2f3033;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-si=
+ze:16px;font-weight:400;line-height:1.375;margin:0;min-width:100%;padding:0=
+;text-align:center;width:100%!important">  <span class=3D"preheader" style=
+=3D"color:#f3f3f3;display:none!important;font-size:1px;line-height:1px;max-=
+height:0;max-width:0;mso-hide:all!important;opacity:0;overflow:hidden;visib=
+ility:hidden">We successfully issued your transfer</span><table role=3D"pre=
+sentation" class=3D"body" style=3D"margin:0;background:#fff;background-colo=
+r:#fff;border-collapse:collapse;border-spacing:0;box-sizing:border-box;colo=
+r:#2f3033;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size=
+:16px;font-weight:400;height:100%;line-height:1.375;margin:0;padding:0;text=
+-align:center;vertical-align:top;width:100%"><tr style=3D"padding:0;text-al=
+ign:left;vertical-align:top"><td class=3D"center" align=3D"center" valign=
+=3D"top" style=3D"-moz-hyphens:auto;-webkit-hyphens:auto;margin:0;border-co=
+llapse:collapse!important;color:#2f3033;font-family:'Helvetica Neue',Helvet=
+ica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-heigh=
+t:1.375;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:bre=
+ak-word"><table role=3D"presentation" class=3D"wrapper venmo-logo-container=
+" align=3D"center" style=3D"border-collapse:collapse;border-spacing:0;box-s=
+izing:border-box;color:#2f3033;font-family:'Helvetica Neue',Helvetica,Arial=
+,sans-serif;font-size:16px;font-weight:400;line-height:1.375;padding:0;text=
+-align:center;vertical-align:top;width:100%"><tr style=3D"padding:0;text-al=
+ign:left;vertical-align:top"><td class=3D"wrapper-inner" style=3D"-moz-hyph=
+ens:auto;-webkit-hyphens:auto;margin:0;border-collapse:collapse!important;c=
+olor:#2f3033;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-s=
+ize:16px;font-weight:400;hyphens:auto;line-height:1.375;margin:0;padding:0;=
+padding-top:16px;text-align:left;vertical-align:top;word-wrap:break-word"><=
+table role=3D"presentation" align=3D"center" class=3D"container" style=3D"m=
+argin:0 auto;background:#fff;border-collapse:collapse;border-spacing:0;box-=
+sizing:border-box;color:#2f3033;font-family:'Helvetica Neue',Helvetica,Aria=
+l,sans-serif;font-size:16px;font-weight:400;line-height:1.375;margin:0 auto=
+;padding:0;text-align:inherit;vertical-align:top;width:580px"><tbody><tr st=
+yle=3D"padding:0;text-align:left;vertical-align:top"><td style=3D"-moz-hyph=
+ens:auto;-webkit-hyphens:auto;margin:0;border-collapse:collapse!important;c=
+olor:#2f3033;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-s=
+ize:16px;font-weight:400;hyphens:auto;line-height:1.375;margin:0;padding:0;=
+text-align:left;vertical-align:top;word-wrap:break-word"><table role=3D"pre=
+sentation" class=3D"row" style=3D"border-collapse:collapse;border-spacing:0=
+;box-sizing:border-box;color:#2f3033;display:table;font-family:'Helvetica N=
+eue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:=
+1.375;padding:0;position:relative;text-align:center;vertical-align:top;widt=
+h:100%"><tbody><tr style=3D"padding:0;text-align:left;vertical-align:top"><=
+th class=3D"small-12 large-12 columns first last" style=3D"margin:0 auto;co=
+lor:#2f3033;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-si=
+ze:16px;font-weight:400;line-height:1.375;margin:0 auto;padding:0;padding-b=
+ottom:0;padding-left:16px;padding-right:16px;text-align:left;width:564px"><=
+table role=3D"presentation" style=3D"border-collapse:collapse;border-spacin=
+g:0;box-sizing:border-box;color:#2f3033;font-family:'Helvetica Neue',Helvet=
+ica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.375;paddi=
+ng:0;text-align:center;vertical-align:top;width:100%"><tr style=3D"padding:=
+0;text-align:left;vertical-align:top"><th style=3D"margin:0;color:#2f3033;f=
+ont-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-=
+weight:400;line-height:1.375;margin:0;padding:0;text-align:left"><img src=
+=3D"https://d3f7mhbv11m2z3.cloudfront.net/email-assets/shared/venmo-logo-v2=
+.png" alt=3D"Venmo logo" width=3D"106" height class=3D"venmo-logo" style=3D=
+"-ms-interpolation-mode:bicubic;clear:both;display:block;height:auto;max-wi=
+dth:100%;outline:0;text-decoration:none;width:53px"></th><th class=3D"expan=
+der" style=3D"margin:0;color:#2f3033;font-family:'Helvetica Neue',Helvetica=
+,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.375;margin:0=
+;padding:0!important;text-align:left;visibility:hidden;width:0"></th></tr><=
+/table></th></tr></tbody></table></td></tr></tbody></table></td></tr></tabl=
+e><center data-parsed style=3D"min-width:580px;width:100%"><table role=3D"p=
+resentation" align=3D"center" class=3D"wrapper transactional-style float-ce=
+nter" style=3D"margin:0 auto;border-collapse:collapse;border-spacing:0;box-=
+sizing:border-box;color:#2f3033;float:none;font-family:'Helvetica Neue',Hel=
+vetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.375;ma=
+rgin:0 auto;padding:0;text-align:center;vertical-align:top;width:100%"><tr =
+style=3D"padding:0;text-align:left;vertical-align:top"><td class=3D"wrapper=
+-inner" style=3D"-moz-hyphens:auto;-webkit-hyphens:auto;margin:0;border-col=
+lapse:collapse!important;color:#2f3033;font-family:'Helvetica Neue',Helveti=
+ca,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height=
+:1.375;margin:0;padding:0;padding-top:16px;text-align:left;vertical-align:t=
+op;word-wrap:break-word"><table role=3D"presentation" align=3D"center" clas=
+s=3D"container" style=3D"margin:0 auto;background:#fff;border-collapse:coll=
+apse;border-spacing:0;box-sizing:border-box;color:#2f3033;font-family:'Helv=
+etica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-=
+height:1.375;margin:0 auto;padding:0;text-align:inherit;vertical-align:top;=
+width:580px"><tbody><tr style=3D"padding:0;text-align:left;vertical-align:t=
+op"><td style=3D"-moz-hyphens:auto;-webkit-hyphens:auto;margin:0;border-col=
+lapse:collapse!important;color:#2f3033;font-family:'Helvetica Neue',Helveti=
+ca,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height=
+:1.375;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:brea=
+k-word"> <table role=3D"presentation" class=3D"row transactional-style" sty=
+le=3D"border-collapse:collapse;border-spacing:0;box-sizing:border-box;color=
+:#2f3033;display:table;font-family:'Helvetica Neue',Helvetica,Arial,sans-se=
+rif;font-size:16px;font-weight:400;line-height:1.375;padding:0;position:rel=
+ative;text-align:center;vertical-align:top;width:100%"><tbody><tr style=3D"=
+padding:0;text-align:left;vertical-align:top"><th class=3D"small-12 large-1=
+2 columns first last" style=3D"margin:0 auto;color:#2f3033;font-family:'Hel=
+vetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line=
+-height:1.375;margin:0 auto;padding:0;padding-bottom:0;padding-left:16px;pa=
+dding-right:16px;text-align:left;width:564px"><table role=3D"presentation" =
+style=3D"border-collapse:collapse;border-spacing:0;box-sizing:border-box;co=
+lor:#2f3033;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-si=
+ze:16px;font-weight:400;line-height:1.375;padding:0;text-align:center;verti=
+cal-align:top;width:100%"><tr style=3D"padding:0;text-align:left;vertical-a=
+lign:top"><th style=3D"margin:0;color:#2f3033;font-family:'Helvetica Neue',=
+Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.375=
+;margin:0;padding:0;text-align:left"><p class=3D"pronounced-detail" style=
+=3D"margin:0;margin-bottom:15px;color:#2f3033;font-family:'Helvetica Neue',=
+Helvetica,Arial,sans-serif;font-size:20px;font-weight:400;line-height:27.5p=
+x;margin:0;margin-bottom:15px;padding:0;text-align:left">Instant Transfer S=
+ent</p><p style=3D"margin:0;margin-bottom:15px;color:#2f3033;font-family:'H=
+elvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;li=
+ne-height:1.375;margin:0;margin-bottom:15px;padding:0;text-align:left">Init=
+iated on Apr 17, 2022 at 03:41 PM PDT</p><h2 class=3D"info-header" style=3D=
+"margin:0;margin-bottom:10px;color:#2f3033;font-family:'Helvetica Neue',Hel=
+vetica,Arial,sans-serif;font-size:16px;font-variant:all-small-caps;font-wei=
+ght:600;line-height:1.230769231;margin:0;margin-bottom:0;padding:0;padding-=
+bottom:0;padding-top:10px;text-align:left;word-wrap:normal">Transfer Amount=
+</h2><p style=3D"margin:0;margin-bottom:15px;color:#2f3033;font-family:'Hel=
+vetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line=
+-height:1.375;margin:0;margin-bottom:15px;padding:0;text-align:left">$50.00=
+</p><h2 class=3D"info-header" style=3D"margin:0;margin-bottom:10px;color:#2=
+f3033;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16p=
+x;font-variant:all-small-caps;font-weight:600;line-height:1.230769231;margi=
+n:0;margin-bottom:0;padding:0;padding-bottom:0;padding-top:10px;text-align:=
+left;word-wrap:normal">Fee</h2><p style=3D"margin:0;margin-bottom:15px;colo=
+r:#2f3033;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size=
+:16px;font-weight:400;line-height:1.375;margin:0;margin-bottom:15px;padding=
+:0;text-align:left">$0.75</p><h2 class=3D"info-header" style=3D"margin:0;ma=
+rgin-bottom:10px;color:#2f3033;font-family:'Helvetica Neue',Helvetica,Arial=
+,sans-serif;font-size:16px;font-variant:all-small-caps;font-weight:600;line=
+-height:1.230769231;margin:0;margin-bottom:0;padding:0;padding-bottom:0;pad=
+ding-top:10px;text-align:left;word-wrap:normal">What you'll get</h2><p styl=
+e=3D"margin:0;margin-bottom:15px;color:#2f3033;font-family:'Helvetica Neue'=
+,Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.37=
+5;margin:0;margin-bottom:15px;padding:0;text-align:left">$49.25</p><h2 clas=
+s=3D"info-header" style=3D"margin:0;margin-bottom:10px;color:#2f3033;font-f=
+amily:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-varia=
+nt:all-small-caps;font-weight:600;line-height:1.230769231;margin:0;margin-b=
+ottom:0;padding:0;padding-bottom:0;padding-top:10px;text-align:left;word-wr=
+ap:normal">Card</h2><p style=3D"margin:0;margin-bottom:15px;color:#2f3033;f=
+ont-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-=
+weight:400;line-height:1.375;margin:0;margin-bottom:15px;padding:0;text-ali=
+gn:left"> Wells Fargo Bank, National Association Debit &middot;&middot;&mid=
+dot;&middot;5775</p><h2 class=3D"info-header" style=3D"margin:0;margin-bott=
+om:10px;color:#2f3033;font-family:'Helvetica Neue',Helvetica,Arial,sans-ser=
+if;font-size:16px;font-variant:all-small-caps;font-weight:600;line-height:1=
+.230769231;margin:0;margin-bottom:0;padding:0;padding-bottom:0;padding-top:=
+10px;text-align:left;word-wrap:normal">Transaction ID</h2><p style=3D"margi=
+n:0;margin-bottom:15px;color:#2f3033;font-family:'Helvetica Neue',Helvetica=
+,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.375;margin:0=
+;margin-bottom:15px;padding:0;text-align:left">8059727934</p><table role=3D=
+"presentation" class=3D"spacer" style=3D"border-collapse:collapse;border-sp=
+acing:0;box-sizing:border-box;color:#2f3033;font-family:'Helvetica Neue',He=
+lvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.375;p=
+adding:0;text-align:center;vertical-align:top;width:100%"><tbody><tr style=
+=3D"padding:0;text-align:left;vertical-align:top"><td height=3D"25px" style=
+=3D"-moz-hyphens:auto;-webkit-hyphens:auto;margin:0;border-collapse:collaps=
+e!important;color:#2f3033;font-family:'Helvetica Neue',Helvetica,Arial,sans=
+-serif;font-size:25px;font-weight:400;hyphens:auto;line-height:25px;margin:=
+0;mso-line-height-rule:exactly;padding:0;text-align:left;vertical-align:top=
+;word-wrap:break-word">&#xA0;</td></tr></tbody></table><p style=3D"margin:0=
+;margin-bottom:15px;color:#2f3033;font-family:'Helvetica Neue',Helvetica,Ar=
+ial,sans-serif;font-size:16px;font-weight:400;line-height:1.375;margin:0;ma=
+rgin-bottom:15px;padding:0;text-align:left">Transfer speed depends on your =
+bank and could take up to 30 minutes. Transfers are reviewed which may resu=
+lt in delays or funds being frozen or removed from your Venmo account. <a h=
+ref=3D"https://help.venmo.com/hc/en-us/articles/115015446688" style=3D"marg=
+in:0;color:#0074de;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;=
+font-weight:400;line-height:1.375;margin:0;padding:0;text-align:left;text-d=
+ecoration:none">Learn more</a>.</p><p style=3D"margin:0;margin-bottom:15px;=
+color:#2f3033;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-=
+size:16px;font-weight:400;line-height:1.375;margin:0;margin-bottom:15px;pad=
+ding:0;text-align:left">You can see the status of your transfers by visitin=
+g your <a href=3D"https://venmo.com/account/statement" style=3D"margin:0;co=
+lor:#0074de;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-we=
+ight:400;line-height:1.375;margin:0;padding:0;text-align:left;text-decorati=
+on:none">Account Statement</a>.</p></th><th class=3D"expander" style=3D"mar=
+gin:0;color:#2f3033;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif=
+;font-size:16px;font-weight:400;line-height:1.375;margin:0;padding:0!import=
+ant;text-align:left;visibility:hidden;width:0"></th></tr></table></th></tr>=
+</tbody></table>  <table role=3D"presentation" class=3D"row" style=3D"borde=
+r-collapse:collapse;border-spacing:0;box-sizing:border-box;color:#2f3033;fo=
+nt-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-w=
+eight:400;line-height:1.375;padding:0;position:relative;text-align:center;v=
+ertical-align:top;width:100%"><tbody><tr style=3D"padding:0;text-align:left=
+;vertical-align:top"><th class=3D"transactional-style small-12 large-12 col=
+umns first last" style=3D"margin:0 auto;color:#2f3033;font-family:'Helvetic=
+a Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-heig=
+ht:1.375;margin:0 auto;padding:0;padding-bottom:0;padding-left:16px;padding=
+-right:16px;text-align:left;width:564px"><table role=3D"presentation" style=
+=3D"border-collapse:collapse;border-spacing:0;box-sizing:border-box;color:#=
+2f3033;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16=
+px;font-weight:400;line-height:1.375;padding:0;text-align:center;vertical-a=
+lign:top;width:100%"><tr style=3D"padding:0;text-align:left;vertical-align:=
+top"><th style=3D"margin:0;color:#2f3033;font-family:'Helvetica Neue',Helve=
+tica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.375;marg=
+in:0;padding:0;text-align:left"><p style=3D"margin:0;margin-bottom:15px;col=
+or:#2f3033;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-siz=
+e:16px;font-weight:400;line-height:1.375;margin:0;margin-bottom:15px;paddin=
+g:0;text-align:left">IMPORTANT: If you did not make this request,  please c=
+ontact <a href=3D"mailto:support@venmo.com" style=3D"margin:0;color:#0074de=
+;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:400;li=
+ne-height:1.375;margin:0;padding:0;text-align:left;text-decoration:none">su=
+pport@venmo.com</a> or call <a href=3D"tel:(855) 812-4430" style=3D"margin:=
+0;color:#0074de;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fon=
+t-weight:400;line-height:1.375;margin:0;padding:0;text-align:left;text-deco=
+ration:none">(855) 812-4430</a> immediately.</p><p style=3D"margin:0;margin=
+-bottom:15px;color:#2f3033;font-family:'Helvetica Neue',Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:400;line-height:1.375;margin:0;margin-bo=
+ttom:15px;padding:0;text-align:left">For any issues, including the recipien=
+t not receiving funds, please contact us at <a href=3D"mailto:support@venmo=
+.com" style=3D"margin:0;color:#0074de;font-family:'Helvetica Neue',Helvetic=
+a,Arial,sans-serif;font-weight:400;line-height:1.375;margin:0;padding:0;tex=
+t-align:left;text-decoration:none">support@venmo.com</a> or call <a href=3D=
+"tel:(855) 812-4430" style=3D"margin:0;color:#0074de;font-family:'Helvetica=
+ Neue',Helvetica,Arial,sans-serif;font-weight:400;line-height:1.375;margin:=
+0;padding:0;text-align:left;text-decoration:none">(855) 812-4430</a>.</p></=
+th><th class=3D"expander" style=3D"margin:0;color:#2f3033;font-family:'Helv=
+etica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-=
+height:1.375;margin:0;padding:0!important;text-align:left;visibility:hidden=
+;width:0"></th></tr></table></th></tr></tbody></table><table role=3D"presen=
+tation" class=3D"row" style=3D"border-collapse:collapse;border-spacing:0;bo=
+x-sizing:border-box;color:#2f3033;font-family:'Helvetica Neue',Helvetica,Ar=
+ial,sans-serif;font-size:16px;font-weight:400;line-height:1.375;padding:0;p=
+osition:relative;text-align:center;vertical-align:top;width:100%"><tbody><t=
+r style=3D"padding:0;text-align:left;vertical-align:top"><th class=3D"trans=
+actional-style disclosures small-12 large-12 columns first last" style=3D"m=
+argin:0 auto;color:#2f3033;font-family:'Helvetica Neue',Helvetica,Arial,san=
+s-serif;font-size:16px;font-weight:400;line-height:1.375;margin:0 auto;padd=
+ing:16px;padding-bottom:0;padding-left:16px;padding-right:16px;text-align:c=
+enter;width:564px"><table role=3D"presentation" style=3D"border-collapse:co=
+llapse;border-spacing:0;box-sizing:border-box;color:#2f3033;font-family:'He=
+lvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;lin=
+e-height:1.375;padding:0;text-align:center;vertical-align:top;width:100%"><=
+tr style=3D"padding:0;text-align:left;vertical-align:top"><th style=3D"marg=
+in:0;color:#2f3033;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;=
+font-size:16px;font-weight:400;line-height:1.375;margin:0;padding:0;text-al=
+ign:left"><p style=3D"margin:0;margin-bottom:15px;color:#6b6e76;font-family=
+:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:80%;font-weight:400;=
+line-height:1.375;margin:0;margin-bottom:15px;padding:0;text-align:left">Se=
+e our <a href=3D"https://venmo.com/legal/us-licenses" style=3D"margin:0;col=
+or:#0074de;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-wei=
+ght:400;line-height:1.375;margin:0;padding:0;text-align:left;text-decoratio=
+n:underline">disclosures</a> for more information.</p></th><th class=3D"exp=
+ander" style=3D"margin:0;color:#2f3033;font-family:'Helvetica Neue',Helveti=
+ca,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.375;margin=
+:0;padding:0!important;text-align:left;visibility:hidden;width:0"></th></tr=
+></table></th></tr></tbody></table> <table role=3D"presentation" class=3D"r=
+ow" style=3D"border-collapse:collapse;border-spacing:0;box-sizing:border-bo=
+x;color:#2f3033;display:table;font-family:'Helvetica Neue',Helvetica,Arial,=
+sans-serif;font-size:16px;font-weight:400;line-height:1.375;padding:0;posit=
+ion:relative;text-align:center;vertical-align:top;width:100%"><tbody><tr st=
+yle=3D"padding:0;text-align:left;vertical-align:top"><th class=3D"disclosur=
+es small-12 large-12 columns first last" style=3D"margin:0 auto;color:#2f30=
+33;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;f=
+ont-weight:400;line-height:1.375;margin:0 auto;padding:16px;padding-bottom:=
+0;padding-left:16px;padding-right:16px;text-align:center;width:564px"><tabl=
+e role=3D"presentation" style=3D"border-collapse:collapse;border-spacing:0;=
+box-sizing:border-box;color:#2f3033;font-family:'Helvetica Neue',Helvetica,=
+Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.375;padding:0=
+;text-align:center;vertical-align:top;width:100%"><tr style=3D"padding:0;te=
+xt-align:left;vertical-align:top"><th style=3D"margin:0;color:#2f3033;font-=
+family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weig=
+ht:400;line-height:1.375;margin:0;padding:0;text-align:left"><p style=3D"ma=
+rgin:0;margin-bottom:15px;color:#6b6e76;font-family:'Helvetica Neue',Helvet=
+ica,Arial,sans-serif;font-size:80%;font-weight:400;line-height:1.375;margin=
+:0;margin-bottom:15px;padding:0;text-align:left">Venmo is a service of PayP=
+al, Inc., a licensed provider of money transfer services. All money transmi=
+ssion is provided by PayPal, Inc. pursuant to PayPal, Inc.&rsquo;s <a href=
+=3D"https://venmo.com/legal/us-licenses/" style=3D"margin:0;color:#0074de;f=
+ont-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:400;line=
+-height:1.375;margin:0;padding:0;text-align:left;text-decoration:underline"=
+>licenses</a>.</p><p style=3D"margin:0;margin-bottom:15px;color:#6b6e76;fon=
+t-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:80%;font-wei=
+ght:400;line-height:1.375;margin:0;margin-bottom:15px;padding:0;text-align:=
+left">PayPal is located at 2211 North First Street, San Jose, CA 95131.</p>=
+ <p style=3D"margin:0;margin-bottom:15px;color:#6b6e76;font-family:'Helveti=
+ca Neue',Helvetica,Arial,sans-serif;font-size:80%;font-weight:400;line-heig=
+ht:1.375;margin:0;margin-bottom:15px;padding:0;text-align:left">Please do n=
+ot reply directly to this email as you will not receive a response.  For as=
+sistance, please visit our Help Center at <a href=3D"https://help.venmo.com=
+" style=3D"margin:0;color:#0074de;font-family:'Helvetica Neue',Helvetica,Ar=
+ial,sans-serif;font-weight:400;line-height:1.375;margin:0;padding:0;text-al=
+ign:left;text-decoration:underline">help.venmo.com</a>. </p> </th><th class=
+=3D"expander" style=3D"margin:0;color:#2f3033;font-family:'Helvetica Neue',=
+Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.375=
+;margin:0;padding:0!important;text-align:left;visibility:hidden;width:0"></=
+th></tr></table></th></tr></tbody></table><table role=3D"presentation" clas=
+s=3D"row" style=3D"border-collapse:collapse;border-spacing:0;box-sizing:bor=
+der-box;color:#2f3033;display:table;font-family:'Helvetica Neue',Helvetica,=
+Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.375;padding:0=
+;position:relative;text-align:center;vertical-align:top;width:100%"><tbody>=
+<tr style=3D"padding:0;text-align:left;vertical-align:top"><th class=3D"dis=
+closures small-12 large-12 columns first last" style=3D"margin:0 auto;color=
+:#2f3033;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:=
+16px;font-weight:400;line-height:1.375;margin:0 auto;padding:16px;padding-b=
+ottom:0;padding-left:16px;padding-right:16px;text-align:center;width:564px"=
+><table role=3D"presentation" style=3D"border-collapse:collapse;border-spac=
+ing:0;box-sizing:border-box;color:#2f3033;font-family:'Helvetica Neue',Helv=
+etica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.375;pad=
+ding:0;text-align:center;vertical-align:top;width:100%"><tr style=3D"paddin=
+g:0;text-align:left;vertical-align:top"><th style=3D"margin:0;color:#2f3033=
+;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;fon=
+t-weight:400;line-height:1.375;margin:0;padding:0;text-align:left"><p style=
+=3D"margin:0;margin-bottom:15px;color:#6b6e76;font-family:'Helvetica Neue',=
+Helvetica,Arial,sans-serif;font-size:80%;font-weight:400;line-height:1.375;=
+margin:0;margin-bottom:15px;padding:0;text-align:left">For security reasons=
+, you cannot unsubscribe from transaction emails.</p></th><th class=3D"expa=
+nder" style=3D"margin:0;color:#2f3033;font-family:'Helvetica Neue',Helvetic=
+a,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.375;margin:=
+0;padding:0!important;text-align:left;visibility:hidden;width:0"></th></tr>=
+</table></th></tr></tbody></table></td></tr></tbody></table></td></tr></tab=
+le><table role=3D"presentation" align=3D"center" class=3D"wrapper venmo-wor=
+dmark-container float-center" style=3D"margin:0 auto;border-collapse:collap=
+se;border-spacing:0;box-sizing:border-box;color:#2f3033;float:none;font-fam=
+ily:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:=
+400;line-height:1.375;margin:0 auto;padding:0;text-align:center;vertical-al=
+ign:top;width:100%"><tr style=3D"padding:0;text-align:left;vertical-align:t=
+op"><td class=3D"wrapper-inner" style=3D"-moz-hyphens:auto;-webkit-hyphens:=
+auto;margin:0;border-collapse:collapse!important;color:#2f3033;font-family:=
+'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;=
+hyphens:auto;line-height:1.375;margin:0;padding:0;padding-top:16px;text-ali=
+gn:left;vertical-align:top;word-wrap:break-word"><table role=3D"presentatio=
+n" align=3D"center" class=3D"container" style=3D"margin:0 auto;background:#=
+fff;border-collapse:collapse;border-spacing:0;box-sizing:border-box;color:#=
+2f3033;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16=
+px;font-weight:400;line-height:1.375;margin:0 auto;padding:0;text-align:inh=
+erit;vertical-align:top;width:580px"><tbody><tr style=3D"padding:0;text-ali=
+gn:left;vertical-align:top"><td style=3D"-moz-hyphens:auto;-webkit-hyphens:=
+auto;margin:0;border-collapse:collapse!important;color:#2f3033;font-family:=
+'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;=
+hyphens:auto;line-height:1.375;margin:0;padding:0;text-align:left;vertical-=
+align:top;word-wrap:break-word"><table role=3D"presentation" class=3D"row" =
+style=3D"border-collapse:collapse;border-spacing:0;box-sizing:border-box;co=
+lor:#2f3033;display:table;font-family:'Helvetica Neue',Helvetica,Arial,sans=
+-serif;font-size:16px;font-weight:400;line-height:1.375;padding:0;position:=
+relative;text-align:center;vertical-align:top;width:100%"><tbody><tr style=
+=3D"padding:0;text-align:left;vertical-align:top"><th class=3D"small-12 lar=
+ge-12 columns first last" style=3D"margin:0 auto;color:#2f3033;font-family:=
+'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;=
+line-height:1.375;margin:0 auto;padding:0;padding-bottom:0;padding-left:16p=
+x;padding-right:16px;text-align:left;width:564px"><table role=3D"presentati=
+on" style=3D"border-collapse:collapse;border-spacing:0;box-sizing:border-bo=
+x;color:#2f3033;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;fon=
+t-size:16px;font-weight:400;line-height:1.375;padding:0;text-align:center;v=
+ertical-align:top;width:100%"><tr style=3D"padding:0;text-align:left;vertic=
+al-align:top"><th style=3D"margin:0;color:#2f3033;font-family:'Helvetica Ne=
+ue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1=
+.375;margin:0;padding:0;text-align:left"><img class=3D"venmo-wordmark" src=
+=3D"https://d3f7mhbv11m2z3.cloudfront.net/email-assets/shared/venmo-wordmar=
+k-v2.png" alt=3D"Venmo logo" width=3D"200" height=3D"38" style=3D"-ms-inter=
+polation-mode:bicubic;clear:both;display:block;height:auto;max-width:100%;o=
+utline:0;text-decoration:none;width:100px"></th><th class=3D"expander" styl=
+e=3D"margin:0;color:#2f3033;font-family:'Helvetica Neue',Helvetica,Arial,sa=
+ns-serif;font-size:16px;font-weight:400;line-height:1.375;margin:0;padding:=
+0!important;text-align:left;visibility:hidden;width:0"></th></tr></table></=
+th></tr></tbody></table></td></tr></tbody></table></td></tr></table></cente=
+r></td></tr></table><!-- prevent Gmail on iOS font size manipulation --><di=
+v style=3D"display:none;white-space:nowrap;font:15px courier;line-height:0"=
+>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbs=
+p; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &n=
+bsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div></body></=
+html>
+
+------=_Part_490560_1285151188.1650235275383--

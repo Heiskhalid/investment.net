@@ -1,0 +1,202 @@
+Delivered-To: baseballking4224@gmail.com
+Received: by 2002:a05:6902:566:0:0:0:0 with SMTP id a6csp3982295ybt;
+        Wed, 20 Jul 2022 04:33:42 -0700 (PDT)
+X-Google-Smtp-Source: AGRyM1s76GFpo+R2OqfWCJRo52aIiRl1i/oOYc/0mvX25Os06CT0MGWRZylfcy60UswvPuRMxrpv
+X-Received: by 2002:a02:c904:0:b0:33a:6af1:8bcc with SMTP id t4-20020a02c904000000b0033a6af18bccmr19809536jao.108.1658316822445;
+        Wed, 20 Jul 2022 04:33:42 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1658316822; cv=none;
+        d=google.com; s=arc-20160816;
+        b=qeCceaBIdltna6IYeeJ6PS0Vnc7y3lkBhlupj9qIQrBRrlraArgAFSDjGOYO27chjD
+         9vr0OUB7QhXfv1Qe+A5/QzJH9U+h/2WCA7gctXmf9JhkE34tzLVMFnqEO1HXzDEAza45
+         deTp8as7xOxEFXnpYs+2mKFEYxo19Cv+Xv+Pe+5P4N8zzNv7h+VkC1be4OjOmxXZOhOK
+         tsW1PdDIHiw8x8/NmEssgndJIM7fJb6rrS9zunE50wmUTCqmazZczuB1E97FLSfgisl2
+         9HEubnnrgSrukrF6n8hG6Gn8tknG1k6uM8TNzYQmTk1xDmPPbs3SMlYUs9nNhAVsFPOq
+         Jm+A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=uow_id:mime-version:subject:message-id:to:from:date:dkim-signature;
+        bh=EFjWc3mmgr1DTlpd75cvgbUP4/vgOMbYD0za3u1qXG4=;
+        b=Yj0xdIO9K2at/ARZi1m4dhDD3NoGZiljes8wOY1NOLtVx1UqXHy8kzh00EKQgKkMX2
+         EWteH2CazDZQ23Lp0PQgy2Re9uBFSZC7Lp5h4GwofbjLcNATEAaC8C9OvZlxbrDlXuKB
+         sNdX7sKMZpuAtPqWeea9CRV9Tn/pFBbk4DKL3aDO9LN7XD6j8IIDvdf9g5TH9LYn1U2D
+         DeSsMhVxoofwBpyqc1zFCZKqt7Qm/7RC1nVNrZAjlOkuC71BJ0QxnA4YGxO+lI5pG637
+         b97zrZDQHghbbKIXNfA604qzXzuxI7rUgOUR1gdah6bYzdnSUmkB0vsmbX6AquKXR/JW
+         Ds6Q==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@notify.wellsfargo.com header.s=2011-05-wfb header.b=d+fcfhsv;
+       spf=pass (google.com: domain of alerts@notify.wellsfargo.com designates 159.45.87.82 as permitted sender) smtp.mailfrom=alerts@notify.wellsfargo.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=notify.wellsfargo.com
+Return-Path: <alerts@notify.wellsfargo.com>
+Received: from mxdalpx06.wellsfargo.com (mxdalpx06.wellsfargo.com. [159.45.87.82])
+        by mx.google.com with ESMTPS id n2-20020a027142000000b0033ec09920c2si16702481jaf.20.2022.07.20.04.33.42
+        for <baseballking4224@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 20 Jul 2022 04:33:42 -0700 (PDT)
+Received-SPF: pass (google.com: domain of alerts@notify.wellsfargo.com designates 159.45.87.82 as permitted sender) client-ip=159.45.87.82;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@notify.wellsfargo.com header.s=2011-05-wfb header.b=d+fcfhsv;
+       spf=pass (google.com: domain of alerts@notify.wellsfargo.com designates 159.45.87.82 as permitted sender) smtp.mailfrom=alerts@notify.wellsfargo.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=notify.wellsfargo.com
+Received: from mn2-122a-ixb-al.wellsfargo.com (mn2-mkze911-lb.wellsfargo.com [162.101.141.120])
+	by mxdalpx06.wellsfargo.com (Sentrion-MTA-4.5.7/Sentrion-MTA-4.5.7) with ESMTP id 26KBXf73154673
+	for <baseballking4224@gmail.com>; Wed, 20 Jul 2022 11:33:41 GMT
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple; d=notify.wellsfargo.com;
+	s=2011-05-wfb; t=1658316821;
+	bh=ssy1kYBhF1iTh+I9Mnl/O0C82yFPivVF+u/s2yD5B4k=;
+	h=Date:From:To:Subject;
+	b=d+fcfhsv9oiAPmaTXEYokR16sl7GxOXZKOnHJcnimYYjoTiG76v35RuV6s3hCCztx
+	 fu8Qyo7L9u3jEvfgRGtNmiB7B4/lL0DD/lGqnYgjJVzYnmq3wn9Xw77pUKO0rhT9yH
+	 L5jPY1/jb5v5czix4uhYxWA6Pr4B2x783koNehGI=
+Date: Wed, 20 Jul 2022 04:33:41 -0700 (PDT)
+From: Wells Fargo Online <alerts@notify.wellsfargo.com>
+To: baseballking4224@gmail.com
+Message-ID: <488114035.14701125.1658316821702@mn2-122a-ixb-al.wellsfargo.com>
+Subject: You sent money with Zelle
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_14701122_1545932104.1658316821701"
+UOW_ID: 9b0a9323-d014-4dbc-9c77-80665b77ae37||68190883986
+
+------=_Part_14701122_1545932104.1658316821701
+Content-Type: multipart/related; 
+	boundary="----=_Part_14701123_1478136340.1658316821701"
+
+------=_Part_14701123_1478136340.1658316821701
+Content-Type: text/html;charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+
+ =20
+  <html xml:lang=3D"en" lang=3D"en"><base href=3D"https://static.wellsfargo=
+.com/messagecenter/static/"/><div id=3D"container" style=3D"margin:0px 0px =
+0px 0px;background-color:#fff"><body style=3D"margin:0px 0px 0px 0px">
+=09 <table role=3D"presentation" style=3D"width:600px;background-color:#D71=
+E28;height: 42px;border-bottom:4px solid #FCC60A" cellpadding=3D"0" cellspa=
+cing=3D"0" xmlns:xhtml=3D"http://www.w3.org/1999/xhtml"><tr><td style=3D"ma=
+x-width:600px"><div align=3D"left" id=3D"c26img" style=3D"margin-top: 11px;=
+margin-bottom: 11px;margin-left: 30px; text-align: left"><a href=3D"https:/=
+/www.wellsfargo.com"/><img id=3D"mastlogo" src=3D"https://static.wellsfargo=
+.com/messagecenter/static/images/masthead_wf_logo.png" border=3D"0" alt=3D"=
+Wells Fargo logo" width=3D"148" style=3D"font-family: Wells Fargo Sans, Ari=
+al, Helvetica, sans-serif; font-size: 13px; line-height: 18px; color: #ffff=
+ff" class=3D"center-on-narrow"/></div></td></tr></table><table role=3D"pres=
+entation" style=3D"width:600px;font-family:arial,helvetica,sans-serif;font-=
+size:12px" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td>
+=09=09<h1 xmlns:xhtml=3D"http://www.w3.org/1999/xhtml" style=3D"margin:24px=
+ 30px 24px 30px;font-size:19px;font-family:arial,helvetica,sans-serif;">You=
+ sent money with Zelle<sup><font size=3D"3">&reg;</font></sup></h1>
+=09
+=09
+=09=09<div xmlns:xhtml=3D"http://www.w3.org/1999/xhtml" id=3D"c11text" styl=
+e=3D"margin: 0 30px 15px 30px;font-family:arial,helvetica,sans-serif;;font-=
+size:12px">You sent money to Sammy. Here are the details:</div>
+=09
+=09<table role=3D"presentation" style=3D"width:580px;font-size:12px;font-fa=
+mily:arial,helvetica,sans-serif;margin-bottom:15px;margin-left:30px;color:#=
+000000" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr><td style=3D"w=
+idth:138px;padding-left:25px;text-align:left" scope=3D"row">
+               =20
+                  <strong>Date</strong>
+               =20
+              </td><td style=3D"text-align:left;">
+               =20
+                  07/20/2022
+               =20
+              </td></tr><tr><td style=3D"width:138px;padding-left:25px;text=
+-align:left" scope=3D"row">
+               =20
+                  <strong>From account</strong>
+               =20
+              </td><td style=3D"text-align:left;">
+               =20
+                  XXXXXX3891
+               =20
+              </td></tr><tr><td style=3D"width:138px;padding-left:25px;text=
+-align:left" scope=3D"row">
+               =20
+                  <strong>Amount</strong>
+               =20
+              </td><td style=3D"text-align:left;">
+               =20
+                  $60.00
+               =20
+              </td></tr><tr><td style=3D"width:138px;padding-left:25px;text=
+-align:left" scope=3D"row">
+               =20
+                  <strong>Fee</strong>
+               =20
+              </td><td style=3D"text-align:left;">
+               =20
+                  $0.00
+               =20
+              </td></tr><tr><td style=3D"width:138px;padding-left:25px;text=
+-align:left" scope=3D"row">
+               =20
+                  <strong>Confirmation code</strong>
+               =20
+              </td><td style=3D"text-align:left;">
+               =20
+                  RP0QKXHBPJ
+               =20
+              </td></tr></table>
+=09
+=09=09<div xmlns:xhtml=3D"http://www.w3.org/1999/xhtml" id=3D"c11text" styl=
+e=3D"margin: 0 30px 15px 30px;font-family:arial,helvetica,sans-serif;;font-=
+size:12px">
+              Sammy  will receive a message saying you've sent the money an=
+d explaining any steps that may be required.</div>
+=09=09=09   <div id=3D"c11text" style=3D"margin: 0 30px 0px 30px;font-famil=
+y:arial,helvetica,sans-serif;font-size:12px;">If you did not send this mone=
+y, or if you have questions, call Wells Fargo Online Customer Service at 1-=
+800-956-4442, 24 hours a day, 7 days a week.</div>
+</td></tr></table><br/><table role=3D"presentation" style=3D"width:600px;fo=
+nt-family:arial,helvetica,sans-serif;font-size:12px;border-top:1px solid #B=
+5ADAD;background-color:#F4F0ED" cellspacing=3D"0" cellpadding=3D"0"><tr><td=
+ colspan=3D"2"><div xmlns:xhtml=3D"http://www.w3.org/1999/xhtml" id=3D"wfFo=
+oter" style=3D"margin:10px 30px 16px 30px;vertical-align:top"><a href=3D"ht=
+tps://www.wellsfargo.com" style=3D"font-size:12px;font-family:arial,helveti=
+ca,sans-serif;margin-right: 16px;color:#336699"><strong>wellsfargo.com</str=
+ong></a> | <a href=3D"https://www.wellsfargo.com/privacy-security/fraud" st=
+yle=3D"font-size:12px;font-family:arial,helvetica,sans-serif;margin-left: 1=
+6px;margin-right: 16px;color:#336699">Security Center</a> | <a href=3D"http=
+s://www.wellsfargo.com/help/contact-us/" style=3D"font-size:12px;font-famil=
+y:arial,helvetica,sans-serif;margin-left: 16px;color:#336699">Contact Us</a=
+></div>
+=09=09=09=09<div xmlns:xhtml=3D"http://www.w3.org/1999/xhtml" id=3D"c26" st=
+yle=3D"margin:16px 30px 16px 30px; font-size: 12px;color: #3B3331">
+              <strong>Please do not reply to this automated email.</strong>
+            </div>
+=09=09=09=09<div id=3D"c26" style=3D"margin:16px 30px 16px 30px; font-size:=
+ 12px;color: #3B3331" xmlns:xhtml=3D"http://www.w3.org/1999/xhtml"><text>
+=09=09=09=09Terms and conditions apply. Transactions typically occur in min=
+utes when the recipient=E2=80=99s email address or U.S. mobile number is al=
+ready enrolled with <em>Zelle</em>. Available to almost anyone with a U.S.-=
+based bank account. For your protection, <em>Zelle</em> should only be used=
+ for sending money to friends, family, or others you know and trust. The Re=
+quest feature within <em>Zelle</em> is only available through Wells Fargo u=
+sing a smartphone, and may not be available for use with all small business=
+ accounts at this time. In order to send payment requests to a U.S. mobile =
+number, the mobile number must already be enrolled with <em>Zelle</em>. Nei=
+ther Wells Fargo nor <em>Zelle</em> offers a protection program for authori=
+zed payments made with <em>Zelle</em>. To send money to or receive money fr=
+om an eligible small business, a consumer must be enrolled with <em>Zelle</=
+em> through their financial institution. Small businesses are not able to e=
+nroll in the separate <em>Zelle</em> app, and cannot receive payments from =
+consumers enrolled in the separate <em>Zelle</em> app. For more information=
+, view the <a href=3D"http://wellsfargo.com/online-banking/transfers/zelle-=
+terms"><em>Zelle</em> Transfer Service Addendum</a>. Your mobile carrier=E2=
+=80=99s message and data rates may apply.
+=09=09=09=09<br/><br/>
+=09=09=09=09Zelle and the Zelle related marks are wholly owned by Early War=
+ning Services, LLC and are used herein under license.
+=09=09=09</text></div>
+=09=09<div id=3D"c26" style=3D"margin:16px 30px 10px 30px; font-size: 12px;=
+ color: #3B3331" xmlns:xhtml=3D"http://www.w3.org/1999/xhtml">9b0a9323-d014=
+-4dbc-9c77-80665b77ae37&#160;&#160;</div>
+=09</td></tr></table><img src=3D"https://ort.wellsfargo.com/openratetrackin=
+g/alertsemail?uow_id=3D9b0a9323-d014-4dbc-9c77-80665b77ae37" height=3D"1" w=
+idth=3D"1" alt=3D"" xmlns:xhtml=3D"http://www.w3.org/1999/xhtml"/>
+=09  </body></div></html>
+
+------=_Part_14701123_1478136340.1658316821701--
+
+------=_Part_14701122_1545932104.1658316821701--

@@ -1,0 +1,295 @@
+Delivered-To: baseballking4224@gmail.com
+Received: by 2002:a05:6020:6d8b:b0:230:b8f:266b with SMTP id gm11csp3327601wdb;
+        Mon, 5 Dec 2022 11:06:52 -0800 (PST)
+X-Google-Smtp-Source: AA0mqf5bIMptwIfJD+uUUsOPk/n6vtL1ehcHApFxzq7wdcNBJhKJBc3Dv7LJnOzlt73PRl6fd+8z
+X-Received: by 2002:a17:902:ccca:b0:186:6c10:7260 with SMTP id z10-20020a170902ccca00b001866c107260mr71698085ple.26.1670267212239;
+        Mon, 05 Dec 2022 11:06:52 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1670267212; cv=none;
+        d=google.com; s=arc-20160816;
+        b=zpWIw4iU4LPBi6MTJWaC2tCgUL+g0hneDyM/JNX0CIC+BU1pDPW86GplSeZY4aIqO2
+         2qz5uvmsODqr/aUWKYTme8koWLcaG0hNbAs5q2QB1qk7MVsSNFFWLuHdiYZVKSW4FdWE
+         mpkYhytSGqmpLiZRNf2MgDtr/fbQIRY3g2S/APH2W5yNlVcjLKyEoG/p1vtczWhARSN7
+         mLImz0w/V04DSH7/oMW5Y5sZrB+zxogK5LfNWTEmC8KViabu8DJfBxItaqwmMYvCx6ET
+         WDQphtxaNxxXi2XF8NiA6LQmYnH8yQHQdmMB7jAPKoN/YdM9AXxjSfs20Z5Iu/WDSG4j
+         1IGA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=feedback-id:mime-version:subject:message-id:to:from:date
+         :dkim-signature:dkim-signature;
+        bh=pGhKUZGVkHCKneYjMzdFvjHd00Jhh3Rl19yg6VzO1Io=;
+        b=W53hsIiq+hk6b0vSymH9wHwtQq3Kq5lln/zcYgB/w0KicVo8iPnmmcWXTvQr6JeTnV
+         vP0zjNVS7DY92YxWlCpzhIq+hx1D3h9NkACYT0ktBQ9+FMq0uobjTKAUHgCl+jk1Hdeg
+         bAiHbGh7nEHWGlsGCtbbW53XbOxYSxkpvyKA4bDxESc6N/VVFp02vnO+iKRYYo9DrhR6
+         Pbv7n3u/YPAiXH0WlOfUuH59MXkNy4ioiNaLaJbdY4KuU0v69U3sG4rdHkqh0Em2ICpu
+         OfE5qnJI3kuFWfGdkUKbLcY0LwMF2rOxGbkV+QT4u3aXkg5HwE70cmeylA0KqGI8ZgH9
+         3rog==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@square.com header.s=6acavlytqpdwk35rse2lwvnnb4ykpniw header.b=DcfUHq7r;
+       dkim=pass header.i=@amazonses.com header.s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx header.b=hYL+5bj0;
+       spf=pass (google.com: domain of 01010184e3af0f80-411f497d-1a1a-4989-bbc8-f152c99cd9c4-000000@amazonses.square.com designates 54.240.84.141 as permitted sender) smtp.mailfrom=01010184e3af0f80-411f497d-1a1a-4989-bbc8-f152c99cd9c4-000000@amazonses.square.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=square.com
+Return-Path: <01010184e3af0f80-411f497d-1a1a-4989-bbc8-f152c99cd9c4-000000@amazonses.square.com>
+Received: from a84-141.smtp-out.us-west-2.amazonses.com (a84-141.smtp-out.us-west-2.amazonses.com. [54.240.84.141])
+        by mx.google.com with ESMTPS id n3-20020a638f03000000b0043aebb63fc9si11891419pgd.732.2022.12.05.11.06.51
+        for <baseballking4224@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 05 Dec 2022 11:06:52 -0800 (PST)
+Received-SPF: pass (google.com: domain of 01010184e3af0f80-411f497d-1a1a-4989-bbc8-f152c99cd9c4-000000@amazonses.square.com designates 54.240.84.141 as permitted sender) client-ip=54.240.84.141;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@square.com header.s=6acavlytqpdwk35rse2lwvnnb4ykpniw header.b=DcfUHq7r;
+       dkim=pass header.i=@amazonses.com header.s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx header.b=hYL+5bj0;
+       spf=pass (google.com: domain of 01010184e3af0f80-411f497d-1a1a-4989-bbc8-f152c99cd9c4-000000@amazonses.square.com designates 54.240.84.141 as permitted sender) smtp.mailfrom=01010184e3af0f80-411f497d-1a1a-4989-bbc8-f152c99cd9c4-000000@amazonses.square.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=square.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6acavlytqpdwk35rse2lwvnnb4ykpniw; d=square.com; t=1670267211;
+	h=Date:From:To:Message-ID:Subject:MIME-Version:Content-Type;
+	bh=5NODDYiUY6wPte98wDBjY4W/+vkD7LbNpgZXGh33uBU=;
+	b=DcfUHq7rHeJfJ4M6kG3m8X+ucSHFMR7hv8ejzHSygJiYvBe8sHF1J+PLuQH6Za+O
+	5l2Jvn1Lbrv2+hLQLyVEI6qI1wExHafdsNU+Ran0OA7MJ+DLCIHv3K4XTrJpBAFQMqd
+	ligAzahCU2egpl8JVgh3qqMrcoA/yTF4T/crbWF8=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1670267211;
+	h=Date:From:To:Message-ID:Subject:MIME-Version:Content-Type:Feedback-ID;
+	bh=5NODDYiUY6wPte98wDBjY4W/+vkD7LbNpgZXGh33uBU=;
+	b=hYL+5bj0R9kRrlGCPoMcoRtQ8oJMk50/dDZFR8Pa2JQhzJpYTKd8bGJPulb8dauY
+	HzL73HGOb02x+vbInFvbX0OaDbh1gCafJo8Da/3dDjKOsPmJjxNpj9h2UnFrVp9flL7
+	HObdhnio84VnG4WUiVYj0qwXA4ZN/7qoGPmDkh5g=
+Date: Mon, 5 Dec 2022 19:06:51 +0000
+From: Cash App <cash@square.com>
+To:  <baseballking4224@gmail.com>
+Message-ID: <01010184e3af0f80-411f497d-1a1a-4989-bbc8-f152c99cd9c4-000000@us-west-2.amazonses.com>
+Subject: You spent $42.94 at Alta Strada City V
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_4770933_2079000125.1670267211608"
+X-EMS-Request-ID: 178_2c25636b-bcfe-467e-8efe-42c4a4ae6e6f
+X-ERS-Token: CFgQion52rf9gcrOARim+9TM2a+yi60B
+Feedback-ID: 1.us-west-2.EF4Hd+uKJPJhWmZlVnJKCXQDkGNGjBpr4Wm4bmSPmbI=:AmazonSES
+X-SES-Outgoing: 2022.12.05-54.240.84.141
+
+------=_Part_4770933_2079000125.1670267211608
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+You spent $42.94 at Alta Strada City V.
+------=_Part_4770933_2079000125.1670267211608
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0">
+  <style type="text/css">
+    .email {
+      text-decoration: none;
+      color: #999999;
+      cursor: text;
+    }
+    .secondary-unlinkify a {
+      text-decoration: none !important;
+      color: #999 !important;
+    }
+    p {
+      margin: 1em 0;
+    }
+    @media screen and (min-width: 415px) {
+      .container {
+        width: 375px !important;
+      }
+    }
+    @media only screen and (max-width: 450px) {
+      /* Targets Gmail on iOS - Full width Fix */
+      u ~ div { min-width: 100vw; }
+      u ~ div .receipt-v4 {min-width: 100vw;}
+
+      /* Targets Gmail on Android - Full width Fix */
+      div > u ~ div .receipt-v4 {min-width: 100%;}
+    }
+  </style>
+ </head>
+ <body style="margin:0;padding:0;min-width: 100%;background-color:#F7F7F7;"><!-- Max-width Table -->
+  <table class="receipt-v4" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#F7F7F7">
+   <tbody>
+    <tr>
+     <td></td>
+     <td width="415"><!-- Max-width Table --> <!-- Padding Between Screen and Content Table -->
+      <table width="100%" cellspacing="0" cellpadding="0" border="0">
+       <tbody>
+        <tr>
+         <td width="20"><img src="https://cash-s.squarecdn.com/static/images/alpha.gif" height="1" width="20" style="display: block;"></td>
+         <td width="100%"><!-- Padding Between Screen and Content Table --> <!-- Content Column Table -->
+          <table width="100%" cellspacing="0" cellpadding="0">
+           <tbody>
+            <tr>
+             <td height="50"><img src="https://cash-s.squarecdn.com/static/images/alpha.gif" width="1" height="50" style="display: block;"></td>
+            </tr>
+            <tr>
+             <td align="center"><!-- Optional "Do Not Forward" message -->
+              <table align="center" class="container" border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" width="100%" style="-webkit-border-radius: 24px;  -moz-border-radius: 24px;  -ms-border-radius: 24px;  -o-border-radius: 24px;  border-radius: 24px;  overflow: hidden;  table-layout: fixed;">
+               <tbody>
+                <tr>
+                 <td height="48"><img src="https://cash-s.squarecdn.com/static/images/alpha.gif" width="1" height="48" style="display: block;"></td>
+                </tr>
+                <tr>
+                 <td align="center" style="padding: 0 48px">
+                  <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                   <tbody>
+                    <tr>
+                     <td align="center">
+                      <table align="center" border="0" cellpadding="0" cellspacing="0" width="60" height="60" class="rendered-profile-avatar" style="width: 60px;  height: 60px;  display: block;">
+                       <tbody>
+                        <tr>
+                         <td><img height="60" width="60" style="width:60px;height:60px;display:block;display: block;" src="https://cash.app/profile-avatar?m=M_5gnhzrmt&amp;w=120&amp;h=120&amp;d=116&amp;b=2&amp;l=false"></td>
+                        </tr>
+                       </tbody>
+                      </table></td>
+                    </tr>
+                    <tr>
+                     <td height="16"><img src="https://cash-s.squarecdn.com/static/images/alpha.gif" width="1" height="16" style="display: block;"></td>
+                    </tr>
+                    <tr>
+                     <td align="center">
+                      <div class="text profile-name" style="overflow: hidden;display: inline-block;  font-size: 18px;  font-weight: 500;  line-height: 24px;  letter-spacing: 0.2px;  color: #333;  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;  vertical-align: middle;">
+                       Alta Strada City V
+                      </div></td>
+                    </tr>
+                    <tr>
+                     <td height="4"><img src="https://cash-s.squarecdn.com/static/images/alpha.gif" width="1" height="4" style="display: block;"></td>
+                    </tr>
+                    <tr>
+                     <td align="center" class="profile-description" style="font-size: 16px;  font-weight: 400;  line-height: 24px;  letter-spacing: 0.2px;  color: #999;  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;">
+                      <div class="text" style="overflow: hidden;">
+                       <span class="secondary-unlinkify">Washington, MD</span>
+                      </div></td>
+                    </tr>
+                    <tr>
+                     <td height="84"><img src="https://cash-s.squarecdn.com/static/images/alpha.gif" width="1" height="84" style="display: block;"></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+                <tr>
+                 <td height="72" align="center" valign="middle" class="amount-text" style="font-weight: 400;  letter-spacing: -1px;  font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;"><span style="line-height:72px;color:#333333;font-size:65px">$42.94</span></td>
+                </tr>
+                <tr>
+                 <td align="center" style="padding: 0 48px">
+                  <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                   <tbody>
+                    <tr>
+                     <td height="84"><img src="https://cash-s.squarecdn.com/static/images/alpha.gif" width="1" height="84" style="display: block;"></td>
+                    </tr>
+                    <tr>
+                     <td align="center">
+                      <table align="center" border="0" cellspacing="0" width="24" height="24" class="status-icon " bgcolor="#3F6AFF" style="border-radius: 50%;">
+                       <tbody>
+                        <tr>
+                         <td><img height="24" style="width:auto;height:24px;display: block;" src="https://cash-s.squarecdn.com/static/images/icon-receipt-status-checkmark.png"></td>
+                        </tr>
+                       </tbody>
+                      </table></td>
+                    </tr>
+                    <tr>
+                     <td height="10"><img src="https://cash-s.squarecdn.com/static/images/alpha.gif" width="1" height="10" style="display: block;"></td>
+                    </tr>
+                    <tr>
+                     <td align="center" class="title" style="font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;  font-size: 16px;  font-weight: 400;  letter-spacing: 0.2px;  line-height: 22px;  color: #333;">
+                      <div class="text" style="overflow: hidden;">
+                       Completed
+                      </div></td>
+                    </tr>
+                    <tr>
+                     <td height="16"><img src="https://cash-s.squarecdn.com/static/images/alpha.gif" width="1" height="16" style="display: block;"></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+                <tr>
+                 <td align="center" style="padding: 0 48px">
+                  <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                  </table></td>
+                </tr>
+                <tr>
+                 <td height="36"><img src="https://cash-s.squarecdn.com/static/images/alpha.gif" width="1" height="36" style="display: block;"></td>
+                </tr>
+                <tr>
+                 <td height="20"><img src="https://cash-s.squarecdn.com/static/images/alpha.gif" width="1" height="20" style="display: block;"></td>
+                </tr>
+                <tr>
+                 <td align="center" class="divider-top detail-list-padding" style="padding: 0 40px;border-top: 1px solid #E5E5E5;">
+                  <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                   <tbody>
+                    <tr>
+                     <td width="265">
+                      <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                       <tbody>
+                        <tr>
+                         <td height="40" colspan="2"><img src="https://cash-s.squarecdn.com/static/images/alpha.gif" width="1" height="40" style="display: block;"></td>
+                        </tr>
+                        <tr class="detail-row">
+                         <td align="left" class="detail-row-text" style="color: #999;  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;  font-size: 14px;  line-height: 24px;  font-weight: 300;  letter-spacing: 0.2px;">
+                          <div class="label">
+                           Amount
+                          </div></td>
+                         <td align="right" class="detail-row-text" style="color: #999;  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;  font-size: 14px;  line-height: 24px;  font-weight: 300;  letter-spacing: 0.2px;">
+                          <div class="value">
+                           $42.94
+                          </div></td>
+                        </tr>
+                        <tr class="detail-row">
+                         <td align="left" class="detail-row-text" style="color: #999;  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;  font-size: 14px;  line-height: 24px;  font-weight: 300;  letter-spacing: 0.2px;">
+                          <div class="label">
+                           Source
+                          </div></td>
+                         <td align="right" class="detail-row-text" style="color: #999;  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;  font-size: 14px;  line-height: 24px;  font-weight: 300;  letter-spacing: 0.2px;">
+                          <div class="value">
+                           Cash Card
+                          </div></td>
+                        </tr>
+                        <tr>
+                         <td height="40" colspan="2"><img src="https://cash-s.squarecdn.com/static/images/alpha.gif" width="1" height="40" style="display: block;"></td>
+                        </tr>
+                       </tbody>
+                      </table></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+               </tbody>
+              </table></td>
+            </tr> <!-- Large Gap between content and footer text areas -->
+            <tr>
+             <td>
+              <table align="center" class="container" border="0" cellpadding="0" cellspacing="0" width="280" style="-webkit-border-radius: 24px;  -moz-border-radius: 24px;  -ms-border-radius: 24px;  -o-border-radius: 24px;  border-radius: 24px;  overflow: hidden;  table-layout: fixed;">
+               <tbody>
+                <tr>
+                 <td height="24"><img src="https://cash-s.squarecdn.com/static/images/alpha.gif" width="1" height="24" style="display: block;"></td>
+                </tr>
+               </tbody>
+              </table></td>
+            </tr>
+            <tr>
+             <td height="1"><img src="https://cash.app/pixel-open/email/1sn0x4kf68ce6bxtbh7j94gws" width="1" height="1" style="display: block;"></td>
+            </tr>
+            <tr>
+             <td align="center">
+              <div class="footer" style="font-size: 14px;  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;  line-height: 24px;  font-weight: 300;  text-align: center;  color: #999;">
+              </div></td>
+            </tr>
+            <tr>
+             <td height="70"><img src="https://cash-s.squarecdn.com/static/images/alpha.gif" width="1" height="70" style="display: block;"></td>
+            </tr>
+           </tbody>
+          </table> <!-- Content Column Table --> <!-- Padding Between Screen and Content Table --></td>
+         <td width="20"><img src="https://cash-s.squarecdn.com/static/images/alpha.gif" height="1" width="20" style="display: block;"></td>
+        </tr>
+       </tbody>
+      </table> <!-- Padding Between Screen and Content Table --> <!-- Max-width Table --></td>
+     <td></td>
+    </tr>
+   </tbody>
+  </table> <!-- Max-width Table -->
+ <img alt="" src="https://f5kbvc75.r.us-west-2.awstrack.me/I0/01010184e3af0f80-411f497d-1a1a-4989-bbc8-f152c99cd9c4-000000/fLVOYbGMA6gcF2g9fxJOXz0E-g0=299" style="display: none; width: 1px; height: 1px;">
+</body>
+</html>
+------=_Part_4770933_2079000125.1670267211608--

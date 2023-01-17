@@ -1,0 +1,295 @@
+Delivered-To: baseballking4224@gmail.com
+Received: by 2002:a05:6020:6d8b:b0:230:b8f:266b with SMTP id gm11csp4519820wdb;
+        Wed, 21 Dec 2022 08:52:57 -0800 (PST)
+X-Google-Smtp-Source: AMrXdXthtUNqFdTVVS30SvF6/xZGzaQFnylaalXwrR4fZ1fB1HBEpB34Gmo/UMgw3pU4LQ8Gf+3G
+X-Received: by 2002:a05:6a00:24c9:b0:57f:7bb4:8fce with SMTP id d9-20020a056a0024c900b0057f7bb48fcemr3515545pfv.32.1671641577099;
+        Wed, 21 Dec 2022 08:52:57 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1671641577; cv=none;
+        d=google.com; s=arc-20160816;
+        b=JPscTLmVqiCW46Gw7yJSCWwFZdsAZn8xt1gHaLayeDiWbYctVf1hkvH5qD9GybhgNv
+         Hf6sXWpbzV0t/6hn3E8PoN7AmIe/2x8dzvHseZkSwDRienYEqmSPOH9ncsrkm2GKxxDe
+         J7/wOIjtpiKDMW7z/L53XmidAC0qBryTvMZzRXAi1iVETSnZJiIKTm3FmdwCxyva9RjB
+         +l/tyhvPiBfial/ZOtHF/8vlrfD45npWyYzaOP7Qqg1MfXwXrkZI4L8a8ulr0ZwqfMM6
+         bEHFFraNBo5zu1mq5FJjohJQlBEGI/N264pU/Vc/Oduf6VKviePa5Jk7cWn+reyXQHvx
+         lHLg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=feedback-id:mime-version:subject:message-id:to:from:date
+         :dkim-signature:dkim-signature;
+        bh=NLhv/GGVHUFzUHOP5ISZVAs2ZeRyNnT3Ad9TzdjgjV0=;
+        b=Kl8jtCfzRzS7QNDyiFjtyERIvmov/+QcgYCYjOZ7xqEKa0VE09IHGDmohwhBEDZB9o
+         wCGdIZY4nBSkP+cuMSrIdKJF9X8nE/B2d1xsDU35/FEyQnq7Cd7Kvfnt6Gvm1z6YA35V
+         RkTGYP03jfTUXvfFpEIHuPGUBEP5JKmy/NZDgic5KTshqJRFcBBW5HiMeH4WyLg991eE
+         ieIdvGn0FG/kJ3Isa8T6hRBESIzUIgYQwDmNtjd2hyBe6hbuYLZfXKqzKxQ/9Q58f4OR
+         eKxCOITxDe0+1VBn2KDZq6uTGfTyT7H5+wLv+fk2D1pcXP+t40JVkFPILEYaryDorDnQ
+         R+0g==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@square.com header.s=6acavlytqpdwk35rse2lwvnnb4ykpniw header.b=b8Nh5fFC;
+       dkim=pass header.i=@amazonses.com header.s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx header.b=XKhAj8Rk;
+       spf=pass (google.com: domain of 01010185359a3455-3e095f7c-7f3b-4665-8d87-1e43ce6d1d72-000000@amazonses.square.com designates 54.240.84.130 as permitted sender) smtp.mailfrom=01010185359a3455-3e095f7c-7f3b-4665-8d87-1e43ce6d1d72-000000@amazonses.square.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=square.com
+Return-Path: <01010185359a3455-3e095f7c-7f3b-4665-8d87-1e43ce6d1d72-000000@amazonses.square.com>
+Received: from a84-130.smtp-out.us-west-2.amazonses.com (a84-130.smtp-out.us-west-2.amazonses.com. [54.240.84.130])
+        by mx.google.com with ESMTPS id v6-20020aa78086000000b00565cb1ebdb2si14926901pff.267.2022.12.21.08.52.56
+        for <baseballking4224@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 21 Dec 2022 08:52:57 -0800 (PST)
+Received-SPF: pass (google.com: domain of 01010185359a3455-3e095f7c-7f3b-4665-8d87-1e43ce6d1d72-000000@amazonses.square.com designates 54.240.84.130 as permitted sender) client-ip=54.240.84.130;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@square.com header.s=6acavlytqpdwk35rse2lwvnnb4ykpniw header.b=b8Nh5fFC;
+       dkim=pass header.i=@amazonses.com header.s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx header.b=XKhAj8Rk;
+       spf=pass (google.com: domain of 01010185359a3455-3e095f7c-7f3b-4665-8d87-1e43ce6d1d72-000000@amazonses.square.com designates 54.240.84.130 as permitted sender) smtp.mailfrom=01010185359a3455-3e095f7c-7f3b-4665-8d87-1e43ce6d1d72-000000@amazonses.square.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=square.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6acavlytqpdwk35rse2lwvnnb4ykpniw; d=square.com; t=1671641576;
+	h=Date:From:To:Message-ID:Subject:MIME-Version:Content-Type;
+	bh=5TOcUfMpeXRTbmCBh6Q0lHo2+Vm8f/oYWhhTVSIo/zE=;
+	b=b8Nh5fFCv5KjQU1iMH/KCquxFJ4u2JORWHzLSb56A8IKR4tUq/8+uPqnJMVCKl17
+	ZYGksmf8fyZNc7G91GUjNnPj+0QTec8fFvf7I7Q/hjM3WBzcGaW5IDlEfh1WLXnmTw/
+	dhG2GDfwOhU0ZkxPUJ2OH+mvipPLFKL+g2WKcQfI=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1671641576;
+	h=Date:From:To:Message-ID:Subject:MIME-Version:Content-Type:Feedback-ID;
+	bh=5TOcUfMpeXRTbmCBh6Q0lHo2+Vm8f/oYWhhTVSIo/zE=;
+	b=XKhAj8RkVvBdo4M6JS8lZGWiEvvIWsvX8lZs2JB/RDkdB8qSxdIMkGpATgC0as0w
+	QpqFtHmne2YBm7xk5WwwVpFbChtxqXXrcuGyXQQ4E1UZ0fQ+EszT+SkiRdT0BgfHQw4
+	vf1Ya1LHNvD1KmQhF/0nO1UR8BCPRcvRn6DlYwkM=
+Date: Wed, 21 Dec 2022 16:52:56 +0000
+From: Cash App <cash@square.com>
+To:  <baseballking4224@gmail.com>
+Message-ID: <01010185359a3455-3e095f7c-7f3b-4665-8d87-1e43ce6d1d72-000000@us-west-2.amazonses.com>
+Subject: You spent $27.46 at Amc Online
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_6512055_183937295.1671641576496"
+X-EMS-Request-ID: 856_defb39e0-8793-4f18-a001-b43cdcc197e3
+X-ERS-Token: CFgQion52rf9gcrOARim+9TM2a+yi60B
+Feedback-ID: 1.us-west-2.EF4Hd+uKJPJhWmZlVnJKCXQDkGNGjBpr4Wm4bmSPmbI=:AmazonSES
+X-SES-Outgoing: 2022.12.21-54.240.84.130
+
+------=_Part_6512055_183937295.1671641576496
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+You spent $27.46 at Amc Online.
+------=_Part_6512055_183937295.1671641576496
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0">
+  <style type="text/css">
+    .email {
+      text-decoration: none;
+      color: #999999;
+      cursor: text;
+    }
+    .secondary-unlinkify a {
+      text-decoration: none !important;
+      color: #999 !important;
+    }
+    p {
+      margin: 1em 0;
+    }
+    @media screen and (min-width: 415px) {
+      .container {
+        width: 375px !important;
+      }
+    }
+    @media only screen and (max-width: 450px) {
+      /* Targets Gmail on iOS - Full width Fix */
+      u ~ div { min-width: 100vw; }
+      u ~ div .receipt-v4 {min-width: 100vw;}
+
+      /* Targets Gmail on Android - Full width Fix */
+      div > u ~ div .receipt-v4 {min-width: 100%;}
+    }
+  </style>
+ </head>
+ <body style="margin:0;padding:0;min-width: 100%;background-color:#F7F7F7;"><!-- Max-width Table -->
+  <table class="receipt-v4" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#F7F7F7">
+   <tbody>
+    <tr>
+     <td></td>
+     <td width="415"><!-- Max-width Table --> <!-- Padding Between Screen and Content Table -->
+      <table width="100%" cellspacing="0" cellpadding="0" border="0">
+       <tbody>
+        <tr>
+         <td width="20"><img src="https://cash-s.squarecdn.com/static/images/alpha.gif" height="1" width="20" style="display: block;"></td>
+         <td width="100%"><!-- Padding Between Screen and Content Table --> <!-- Content Column Table -->
+          <table width="100%" cellspacing="0" cellpadding="0">
+           <tbody>
+            <tr>
+             <td height="50"><img src="https://cash-s.squarecdn.com/static/images/alpha.gif" width="1" height="50" style="display: block;"></td>
+            </tr>
+            <tr>
+             <td align="center"><!-- Optional "Do Not Forward" message -->
+              <table align="center" class="container" border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" width="100%" style="-webkit-border-radius: 24px;  -moz-border-radius: 24px;  -ms-border-radius: 24px;  -o-border-radius: 24px;  border-radius: 24px;  overflow: hidden;  table-layout: fixed;">
+               <tbody>
+                <tr>
+                 <td height="48"><img src="https://cash-s.squarecdn.com/static/images/alpha.gif" width="1" height="48" style="display: block;"></td>
+                </tr>
+                <tr>
+                 <td align="center" style="padding: 0 48px">
+                  <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                   <tbody>
+                    <tr>
+                     <td align="center">
+                      <table align="center" border="0" cellpadding="0" cellspacing="0" width="60" height="60" class="rendered-profile-avatar" style="width: 60px;  height: 60px;  display: block;">
+                       <tbody>
+                        <tr>
+                         <td><img height="60" width="60" style="width:60px;height:60px;display:block;display: block;" src="https://cash.app/profile-avatar?m=M_gcrxasec&amp;w=120&amp;h=120&amp;d=116&amp;b=2&amp;l=false"></td>
+                        </tr>
+                       </tbody>
+                      </table></td>
+                    </tr>
+                    <tr>
+                     <td height="16"><img src="https://cash-s.squarecdn.com/static/images/alpha.gif" width="1" height="16" style="display: block;"></td>
+                    </tr>
+                    <tr>
+                     <td align="center">
+                      <div class="text profile-name" style="overflow: hidden;display: inline-block;  font-size: 18px;  font-weight: 500;  line-height: 24px;  letter-spacing: 0.2px;  color: #333;  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;  vertical-align: middle;">
+                       Amc Online
+                      </div></td>
+                    </tr>
+                    <tr>
+                     <td height="4"><img src="https://cash-s.squarecdn.com/static/images/alpha.gif" width="1" height="4" style="display: block;"></td>
+                    </tr>
+                    <tr>
+                     <td align="center" class="profile-description" style="font-size: 16px;  font-weight: 400;  line-height: 24px;  letter-spacing: 0.2px;  color: #999;  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;">
+                      <div class="text" style="overflow: hidden;">
+                       <span class="secondary-unlinkify">Leawood, KS</span>
+                      </div></td>
+                    </tr>
+                    <tr>
+                     <td height="84"><img src="https://cash-s.squarecdn.com/static/images/alpha.gif" width="1" height="84" style="display: block;"></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+                <tr>
+                 <td height="72" align="center" valign="middle" class="amount-text" style="font-weight: 400;  letter-spacing: -1px;  font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;"><span style="line-height:72px;color:#333333;font-size:65px">$27.46</span></td>
+                </tr>
+                <tr>
+                 <td align="center" style="padding: 0 48px">
+                  <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                   <tbody>
+                    <tr>
+                     <td height="84"><img src="https://cash-s.squarecdn.com/static/images/alpha.gif" width="1" height="84" style="display: block;"></td>
+                    </tr>
+                    <tr>
+                     <td align="center">
+                      <table align="center" border="0" cellspacing="0" width="24" height="24" class="status-icon " bgcolor="#999999" style="border-radius: 50%;">
+                       <tbody>
+                        <tr>
+                         <td><img height="24" style="width:auto;height:24px;display: block;" src="https://cash-s.squarecdn.com/static/images/icon-receipt-status-waiting.png"></td>
+                        </tr>
+                       </tbody>
+                      </table></td>
+                    </tr>
+                    <tr>
+                     <td height="10"><img src="https://cash-s.squarecdn.com/static/images/alpha.gif" width="1" height="10" style="display: block;"></td>
+                    </tr>
+                    <tr>
+                     <td align="center" class="title" style="font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;  font-size: 16px;  font-weight: 400;  letter-spacing: 0.2px;  line-height: 22px;  color: #333;">
+                      <div class="text" style="overflow: hidden;">
+                       Pending
+                      </div></td>
+                    </tr>
+                    <tr>
+                     <td height="16"><img src="https://cash-s.squarecdn.com/static/images/alpha.gif" width="1" height="16" style="display: block;"></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+                <tr>
+                 <td align="center" style="padding: 0 48px">
+                  <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                  </table></td>
+                </tr>
+                <tr>
+                 <td height="36"><img src="https://cash-s.squarecdn.com/static/images/alpha.gif" width="1" height="36" style="display: block;"></td>
+                </tr>
+                <tr>
+                 <td height="20"><img src="https://cash-s.squarecdn.com/static/images/alpha.gif" width="1" height="20" style="display: block;"></td>
+                </tr>
+                <tr>
+                 <td align="center" class="divider-top detail-list-padding" style="padding: 0 40px;border-top: 1px solid #E5E5E5;">
+                  <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                   <tbody>
+                    <tr>
+                     <td width="265">
+                      <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                       <tbody>
+                        <tr>
+                         <td height="40" colspan="2"><img src="https://cash-s.squarecdn.com/static/images/alpha.gif" width="1" height="40" style="display: block;"></td>
+                        </tr>
+                        <tr class="detail-row">
+                         <td align="left" class="detail-row-text" style="color: #999;  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;  font-size: 14px;  line-height: 24px;  font-weight: 300;  letter-spacing: 0.2px;">
+                          <div class="label">
+                           Amount
+                          </div></td>
+                         <td align="right" class="detail-row-text" style="color: #999;  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;  font-size: 14px;  line-height: 24px;  font-weight: 300;  letter-spacing: 0.2px;">
+                          <div class="value">
+                           $27.46
+                          </div></td>
+                        </tr>
+                        <tr class="detail-row">
+                         <td align="left" class="detail-row-text" style="color: #999;  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;  font-size: 14px;  line-height: 24px;  font-weight: 300;  letter-spacing: 0.2px;">
+                          <div class="label">
+                           Source
+                          </div></td>
+                         <td align="right" class="detail-row-text" style="color: #999;  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;  font-size: 14px;  line-height: 24px;  font-weight: 300;  letter-spacing: 0.2px;">
+                          <div class="value">
+                           Cash Card
+                          </div></td>
+                        </tr>
+                        <tr>
+                         <td height="40" colspan="2"><img src="https://cash-s.squarecdn.com/static/images/alpha.gif" width="1" height="40" style="display: block;"></td>
+                        </tr>
+                       </tbody>
+                      </table></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+               </tbody>
+              </table></td>
+            </tr> <!-- Large Gap between content and footer text areas -->
+            <tr>
+             <td>
+              <table align="center" class="container" border="0" cellpadding="0" cellspacing="0" width="280" style="-webkit-border-radius: 24px;  -moz-border-radius: 24px;  -ms-border-radius: 24px;  -o-border-radius: 24px;  border-radius: 24px;  overflow: hidden;  table-layout: fixed;">
+               <tbody>
+                <tr>
+                 <td height="24"><img src="https://cash-s.squarecdn.com/static/images/alpha.gif" width="1" height="24" style="display: block;"></td>
+                </tr>
+               </tbody>
+              </table></td>
+            </tr>
+            <tr>
+             <td height="1"><img src="https://cash.app/pixel-open/email/bty7dbhg4hjpw34edb9hs4yze" width="1" height="1" style="display: block;"></td>
+            </tr>
+            <tr>
+             <td align="center">
+              <div class="footer" style="font-size: 14px;  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;  line-height: 24px;  font-weight: 300;  text-align: center;  color: #999;">
+              </div></td>
+            </tr>
+            <tr>
+             <td height="70"><img src="https://cash-s.squarecdn.com/static/images/alpha.gif" width="1" height="70" style="display: block;"></td>
+            </tr>
+           </tbody>
+          </table> <!-- Content Column Table --> <!-- Padding Between Screen and Content Table --></td>
+         <td width="20"><img src="https://cash-s.squarecdn.com/static/images/alpha.gif" height="1" width="20" style="display: block;"></td>
+        </tr>
+       </tbody>
+      </table> <!-- Padding Between Screen and Content Table --> <!-- Max-width Table --></td>
+     <td></td>
+    </tr>
+   </tbody>
+  </table> <!-- Max-width Table -->
+ <img alt="" src="https://f5kbvc75.r.us-west-2.awstrack.me/I0/01010185359a3455-3e095f7c-7f3b-4665-8d87-1e43ce6d1d72-000000/PwFjqtSqZzzwuOW1clqypHvVXds=302" style="display: none; width: 1px; height: 1px;">
+</body>
+</html>
+------=_Part_6512055_183937295.1671641576496--

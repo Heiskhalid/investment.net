@@ -1,0 +1,324 @@
+Delivered-To: baseballking4224@gmail.com
+Received: by 2002:a59:9f12:0:b0:2a3:4ff8:2b3e with SMTP id u18csp1044879vqx;
+        Fri, 1 Apr 2022 14:55:24 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJwNEFAqfQM8KKDrFV6y29qvdD9CL1i127ak4eDAq+TZ5StZd4dx7KnAGs4JzIxNRYJ4oX+b
+X-Received: by 2002:ac8:5996:0:b0:2e1:fe79:d668 with SMTP id e22-20020ac85996000000b002e1fe79d668mr10100903qte.513.1648850124864;
+        Fri, 01 Apr 2022 14:55:24 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1648850124; cv=none;
+        d=google.com; s=arc-20160816;
+        b=HXbkLdrQwsFfpE3qy0NNBrC9nnFt0yP/2a2QpaUReqBDvZOcD2tVjPkIdY7PvGv28I
+         lPbSRaMEuGw924rm9BVWz0TNqW+GjfYDX+ktmkCz+l/DquiBzNwioD5WDTVjXxb3XQZD
+         8yDkfwvyiS8b39kXPwNMAlE0pCOGRajoWJQWGmWt90lspZunBhwNMccR2oCYKETKWEEx
+         FQJkyttzpdy5hB5M+XDTJxtrwcicEnHrDPzWfl+2021yjFFXZ26yCShcbGMD4ScwHNog
+         aU8haKAmVmUA4TLc0nxpdZTGsGolX9l+0Na3gtQQ4t3J+WD0DKeIyI9x3aVbZEMb8A2x
+         wEag==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=feedback-id:date:message-id:mime-version:subject:to:reply-to:from
+         :dkim-signature:dkim-signature;
+        bh=lV0SuZRJSGDF+acsoBKbCFRHUe+EhKgWDYenrfx7dHc=;
+        b=MasNf3szRKu+9cAp/xMUNUzDDlL3/Ig3DMMGQF2vgAsUOJhdhSGw8qmhaJdbqhSxe4
+         OoHyjvobMYL6+i1ANVfNxH+fRg8D8KUfYUE6WmnBeBXvrzJ0KBSFhOGVx02zopwvFb3l
+         KwYU66kTVw6YxyKAazLivC0Owgt9SkCLvbOsd61V55SyRqwmrAun6mA6aB1KMpVFPUXl
+         5B8HRbulGos3ltzCxk5pcimW0K1ZGqtMdhlMHWKehvmN8r5CypTOH7hWaduvnwlon9k/
+         Xgqv8NvtUWTMext4yQUfPEz6YrDXjIXCGMuyxZnAmVc3mVoHnvGp5UqbaU3olq3x8tYR
+         wcnQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@venmo.com header.s=qbj4rklbg4bdssleu37kmepljop2lmma header.b=IWtY3j9Q;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=K8YAGFIe;
+       spf=pass (google.com: domain of 0100017fe7203c5a-ad26ef16-77ba-4e9c-94ef-e5f1ea5dd2ca-000000@amazonses.com designates 54.240.31.176 as permitted sender) smtp.mailfrom=0100017fe7203c5a-ad26ef16-77ba-4e9c-94ef-e5f1ea5dd2ca-000000@amazonses.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=venmo.com
+Return-Path: <0100017fe7203c5a-ad26ef16-77ba-4e9c-94ef-e5f1ea5dd2ca-000000@amazonses.com>
+Received: from a31-176.smtp-out.amazonses.com (a31-176.smtp-out.amazonses.com. [54.240.31.176])
+        by mx.google.com with ESMTPS id a3-20020a0cb343000000b00440e46a7d75si1076827qvf.531.2022.04.01.14.55.24
+        for <baseballking4224@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 01 Apr 2022 14:55:24 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 0100017fe7203c5a-ad26ef16-77ba-4e9c-94ef-e5f1ea5dd2ca-000000@amazonses.com designates 54.240.31.176 as permitted sender) client-ip=54.240.31.176;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@venmo.com header.s=qbj4rklbg4bdssleu37kmepljop2lmma header.b=IWtY3j9Q;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=K8YAGFIe;
+       spf=pass (google.com: domain of 0100017fe7203c5a-ad26ef16-77ba-4e9c-94ef-e5f1ea5dd2ca-000000@amazonses.com designates 54.240.31.176 as permitted sender) smtp.mailfrom=0100017fe7203c5a-ad26ef16-77ba-4e9c-94ef-e5f1ea5dd2ca-000000@amazonses.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=venmo.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=qbj4rklbg4bdssleu37kmepljop2lmma; d=venmo.com; t=1648850124;
+	h=From:Reply-To:To:Subject:MIME-Version:Content-Type:Message-ID:Date;
+	bh=tj0L9PF13fU5J4Cl0ca2cVVMXfAFgZK7FSkw1tlPPIk=;
+	b=IWtY3j9QQt7hZ56LQdq+u7X9JDiRWwYfGfJwfPH3x5FCZ33NFEIZnhhRYICNuRv+
+	wexvn1al+N9dJMxsVzLUqxJ3P8ujezD32A6D967aIf+eAlXSk6bKStbwtBTrhzzEQEG
+	n0pgFhgRDELmNFwJL02G/jWuXBRmRR1nB2b1adjQ=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1648850124;
+	h=From:Reply-To:To:Subject:MIME-Version:Content-Type:Message-ID:Date:Feedback-ID;
+	bh=tj0L9PF13fU5J4Cl0ca2cVVMXfAFgZK7FSkw1tlPPIk=;
+	b=K8YAGFIepanJDvA5elA/Sp080ZrNbss8XuUIsepiDL1aPbAvGyCnIVykvFOJapcU
+	dlEsigdZZiwje9ynIctL2XKNUX7WJHrJbV3l7geo+wcFfXlIFJmcJ1Reu0wnxEVldgP
+	LwFyWXPFpXsXBR7P52PenCf7Soyaa4Tghdss5Szo=
+From: Venmo <venmo@venmo.com>
+Reply-To: Venmo No-reply <no-reply@venmo.com>
+To: baseballking4224@gmail.com
+Subject: You paid Rebel FC $1.00
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_2196661_634607646.1648850123870"
+Message-ID: <0100017fe7203c5a-ad26ef16-77ba-4e9c-94ef-e5f1ea5dd2ca-000000@email.amazonses.com>
+Date: Fri, 1 Apr 2022 21:55:23 +0000
+Feedback-ID: 1.us-east-1.fQ0yL0IwGSResIpU9lW9fHNtFl/iEQA4Znd52HkQv2U=:AmazonSES
+X-SES-Outgoing: 2022.04.01-54.240.31.176
+
+------=_Part_2196661_634607646.1648850123870
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+------=_Part_2196661_634607646.1648850123870
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html class=3D""  id=3D"html_container" xmlns=3D"http://www.w3.org/1999/xht=
+ml" dir=3D"ltr" lang=3D"en-US" xmlns:fb=3D"http://www.facebook.com/2008/fbm=
+l">
+    <head>
+        <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Du=
+tf-8">
+        <title> - Venmo</title>
+    </head>
+
+    <body style=3D"margin:0;color: #2F3033">
+       =20
+        <div style=3D"font-family:'helvetica neue';">
+            <div style=3D"margin: 0 auto; max-width: 320px;">
+                <div style=3D"font-size:14px;border: 2px solid #e8ebea;">
+                    <div style=3D"padding: 10px 0; text-align: center; back=
+ground-color: #0074DE;">
+                        <img src=3D"https://s3.amazonaws.com/venmo/venmo-lo=
+go-white.png" alt=3D"venmo" title=3D"venmo" style=3D"color: #fff;width:125p=
+x;height:24px;" />
+                    </div>
+                   =20
+                    <div style=3D"padding:20px;background-color:#fff;">
+                       =20
+
+<div width=3D"100%" >
+   =20
+
+
+
+   =20
+
+<table id=3D"_story" width=3D"100%"> <tbody>
+    <tr>
+        <!-- img of actor -->
+        <td valign=3D"top" width=3D"48px" style=3D"padding-right:10px;">
+            <a href=3D"https://venmo.com/code?user_id=3D2701356523585536625=
+&actor_id=3D2701356523585536625" aria-label=3D"">
+                <img src=3D"https://s3.amazonaws.com/venmo/no-image.gif" al=
+t=3D"" style=3D"border-radius:3px;width:48px;height:48px;"/>
+            </a>
+        </td>
+        <td style=3D"font-size:14px;color:#2F3033;vertical-align:top;paddin=
+g-left:2px;">
+            <div >
+                <!-- actor name -->
+                <a style=3D"color:#0074DE; text-decoration:none" href=3D"ht=
+tps://venmo.com/code?user_id=3D2701356523585536625&actor_id=3D2701356523585=
+536625">
+                    You
+                </a>
+                <!-- action -->
+                <span>
+                    paid
+                </span>
+              =20
+                <!-- recipient name -->
+                <a style=3D"color:#0074DE; text-decoration:none"
+                   =20
+                    href=3D"https://venmo.com/code?user_id=3D29158862141521=
+92072&actor_id=3D2701356523585536625">
+                   =20
+                    Rebel FC
+                </a>
+               =20
+            </div>
+            <!-- note -->
+            <div>
+                <p>=E2=9C=8C=F0=9F=8F=BF</p>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td style=3D"font-size:14px;padding-left:2px;color:#2F3033;">
+            Transfer Date and Amount:
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td style=3D"font-size:14px;padding-left:2px;color:#2F3033;">
+        <!-- date, audience, and amount -->
+            <span>Apr 01, 2022 PDT</span>
+            <span> =C2=B7 </span>
+            <img style=3D"vertical-align: -1px; width: 12px; height: 12px;"=
+ src=3D"https://s3.amazonaws.com/venmo/audience/public_v2.png" alt=3D"publi=
+c"/>
+           =20
+
+            <!-- amount -->
+           =20
+            <span style=3D"float:right;">
+               =20
+                - $1.00
+               =20
+            </span>
+           =20
+        </td>
+    </tr>
+   =20
+   =20
+   =20
+    <tr>
+        <td></td>
+        <td style=3D"padding-top:10px;">
+            <table style=3D"width:170px; table-layout:fixed;font-size:14px;=
+">
+                <tbody>
+                <tr>
+                   =20
+                    <td style=3D"padding:5px 0; text-align:center; border-r=
+adius:50px; background-color:#0074DE;" >
+                        <a href=3D"https://venmo.com/story/3507127045615850=
+310?k=3Da0ccee32-9aca-4194-966c-33a24fd58b08" style=3D"text-decoration:none=
+; color: #fff;display:block;width:100%;">
+                                Like
+                        </a>
+                    </td>
+                   =20
+                   =20
+                    <td style=3D"padding:5px 0; border-radius:50px; text-al=
+ign:center;background-color:#0074DE;" >
+                        <a href=3D"https://venmo.com/story/3507127045615850=
+310?login=3D1" style=3D"text-decoration:none; color: #fff;display:block;wid=
+th:100%;">
+                            Comment
+                        </a>
+                    </td>
+                   =20
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+   =20
+</tbody> </table>
+
+
+
+<div style=3D"margin-top:10px;"></div>
+   =20
+
+    <div style=3D"color:#6B6E76;font-size:12px;margin-top:10px;padding-top:=
+10px; border-top: 1px dotted #ccc">
+       =20
+       =20
+           =20
+                Charged to your
+           =20
+           =20
+                Visa
+           =20
+           =20
+                debit
+           =20
+           =20
+                card ending in 5775,
+           =20
+            and will appear as "VENMO" on your card's billing statement.
+           =20
+       =20
+       =20
+        <br /><br />
+        Payment ID: 3507127045011800688
+       =20
+</div>
+
+   =20
+<div style=3D"color:#6B6E76;font-size:12px;margin-top:10px;padding-top:10px=
+; border-top: 1px dotted #ccc">
+    <div style=3D"width:50%; padding:5px; text-align:center; border-radius:=
+50px; background-color:#0074DE;">
+        <a href=3D"https://venmo.com/referral/invite?campaign_service=3Dema=
+il&campaign_template=3Dpayment.sent" style=3D"text-decoration:none; color: =
+#000; display:block; width:100%; font-size:12px;">
+            <div style=3D"font-size:14px; color:#fff;">Invite Friends!</div=
+>
+        </a>
+    </div>
+
+
+    <div style=3D"margin-bottom:10px;"></div>
+
+</div>
+
+    <div id=3D"_receipt_disclosures" style=3D"font-size:11px;margin-top:10p=
+x;padding-top:10px; border-top: 1px dotted #ccc">
+
+    <div>
+        For any issues, including the recipient not receiving funds, please=
+ contact us at support@venmo.com or call 1-855-812-4430.
+    </div>
+
+
+    <div style=3D"margin-top:10px;">
+        See our <a style=3D"text-decoration:none;color:#0074DE" href=3D"htt=
+ps://venmo.com/legal/us-licenses">disclosures</a> for more information.<div=
+ style=3D"margin-top:10px;">Please do not reply directly to this email. For=
+ more assistance, visit our Help Center at <a style=3D"text-decoration:none=
+;color:#0074DE" href=3D"https://help.venmo.com">help.venmo.com</a>.</div><d=
+iv style=3D"margin-top:10px;">This payment will be reviewed for compliance =
+with our User Agreement and if we determine that there is a violation by ei=
+ther party, it may be reversed or your ability to transfer to your bank acc=
+ount may be restricted.</div>
+    </div>
+
+</div>
+
+</div>
+
+
+                       =20
+                    </div>
+                    <div style=3D"padding:10px 15px; color: #6B6E76; text-a=
+lign: center;">
+                       =20
+                        <div style=3D"color: #6B6E76; margin-top: 5px;">
+                            Venmo is a service of PayPal, Inc., a licensed =
+provider of money transfer services. All money transmission is provided by =
+PayPal, Inc. pursuant to <a href=3D"https://venmo.com/legal/us-licenses/" s=
+tyle=3D"color:#0074DE; text-decoration:none">PayPal, Inc.=E2=80=99s license=
+s</a>.
+                        </div>
+                      <p style=3D"color: #6B6E76; margin-top: 14px;">PayPal=
+ is located at </p><p style=3D"color: #6B6E76;">2211 North First Street, Sa=
+n Jose, CA 95131</p>
+                        <div style=3D"margin-top: 5px;">
+                           =20
+                           =20
+                                <div style=3D"font-size: smaller; margin-to=
+p: 20px;">For security reasons, you cannot unsubscribe from payment emails.=
+</div>
+                           =20
+                        </div>
+                       =20
+                    </div>
+                </div>
+               =20
+               =20
+            </div>
+        </div>
+    </body>
+</html>
+
+------=_Part_2196661_634607646.1648850123870--
